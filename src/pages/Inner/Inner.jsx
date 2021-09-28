@@ -3,14 +3,18 @@ import { Box } from "../../components/Box/Box";
 import styles from "./Inner.module.scss";
 import { TimeLine } from "./../../components/TimeLine/TimeLine";
 import { Expertise } from "../../components/Expertise/Expertise";
-import { Navigation } from "../../components/Navigation/Navigation";
 import { Panel } from "../../components/Panel/Panel";
+import Address from "../../components/Address/Address";
+import Feedback from "../../components/Feedback/Feedback";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { Burger } from "../../components/Burger/Burger";
 
 export const Inner = () => {
   return (
     <div className={styles.innerPage}>
     <Panel/>
-    <main >
+    <main className={styles.main__content} >
       <Box title="About me">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
@@ -73,6 +77,14 @@ export const Inner = () => {
         ]}
       />
       </Box>
+      <Box title="Contacts">
+        <Address/>
+      </Box>
+      <Box>
+      <Feedback data={[ {feedback: ' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor', reporter: { photoUrl: 'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg"', name: 'John Doe', citeUrl: 'https://www.citeexample.com' } }]} />
+
+      </Box>
+      <Burger clickHandler={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}><FontAwesomeIcon icon={faChevronUp} /></Burger>
     </main>
     </div>
   );
