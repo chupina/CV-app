@@ -1,0 +1,50 @@
+@import '../../assets/styles/variables.scss';
+.photoBox{
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+   color:white;
+   img{
+    border: 1px solid $color-white;
+    border-radius: 50%;
+ }
+}
+.large{
+   img{
+    max-width: 163px;
+  }
+}
+
+.medium{
+  img{
+    max-width: 100px;
+  }
+  h2,p{
+    display: none;
+   }
+
+}
+
+.small{
+  img{
+ max-width: 40px;
+ 
+  }
+  h1,h2,p{
+   display: none;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .medium{
+    img{
+      max-width: 40px;
+      
+       }
+       h1,h2,p{
+        display: none;
+       }
+   }   
+ }

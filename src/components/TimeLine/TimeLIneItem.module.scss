@@ -1,0 +1,52 @@
+@import "../../assets/styles/variables.scss";
+.timeLineItem {
+  box-sizing: border-box;
+  display: flex;
+  align-items: start;
+
+  .timeLine {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: stretch;
+    
+     time {
+      padding-top: 15px;
+      width: 40px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 120%;
+    }
+    .scroll {
+      width:5px ;
+      height: 100px;
+      background-color: $color-shamrock;
+  }
+  }
+  .info {
+    width: 100%;
+    padding: 15px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    background-color: $color-gallery;
+    h3 {
+      margin: 0;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 120%;
+    }
+    p {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+  }
