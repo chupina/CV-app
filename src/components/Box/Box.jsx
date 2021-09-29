@@ -1,4 +1,11 @@
 import React from "react";
-import styles from './Box.module.scss';
-export const Box = ({title, children}) => <section id={title} className={styles.box}><h2>{title}</h2><div>{children}</div></section>
+import "./Box.scss";
 
+const Box = ({ title, children }) => (
+  <section id={title} className="box">
+    <h2 className="box__title">{title}</h2>
+    <div className="box__content">{children}</div>
+  </section>
+);
+
+export default Box;

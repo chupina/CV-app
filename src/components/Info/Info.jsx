@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './Info.module.scss';
-export const Info = ({text}) =><p className={styles.info}>{text}</p>
+import "./Info.scss";
+const Info = ({ text }) => <p className="info">{text}</p>;
 
 export default Info;

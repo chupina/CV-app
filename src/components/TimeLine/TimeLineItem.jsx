@@ -1,16 +1,17 @@
 import React from "react";
-import styles from './TimeLIneItem.module.scss';
+import Article from "../Article/Article";
+import "./TimeLIneItem.scss";
 
-const TimeLineItem = ({date, title, text }) => {
+const TimeLineItem = ({ date, title, text }) => {
   return (
-   <div className={styles.timeLineItem}>
-    <div className={styles.timeLine}><time>{date}</time><div className={styles.scroll}></div></div>
-    <article className={styles.info}>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </article>
+    <div className="timeLineItem">
+      <time className="timeLineItem__time">{date}</time>
+      <div className="timeLineItem__scroll"></div>
+      <div className="timeLineItem__info">
+        <Article title={title} text={text} />
+      </div>
     </div>
- )
-}
+  );
+};
 
 export default TimeLineItem;

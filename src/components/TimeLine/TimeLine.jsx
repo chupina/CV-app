@@ -1,11 +1,13 @@
 import React from "react";
-import styles from './TimeLine.module.scss';
+import './TimeLine.scss';
 import TimeLineItem from "./TimeLineItem";
 
-export const TimeLine = ({data}) => {
+ const TimeLine = ({data}) => {
   return (
-   <div className={styles.timeLine}>
-     {data.map(item =><TimeLineItem {...item}/>)}
+   <div className='timeLine'>
+     {data.map(item =><TimeLineItem key={item.title} {...item}/>)}
     </div>
  )
 }
+
+export default TimeLine;

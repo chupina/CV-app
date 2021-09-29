@@ -1,0 +1,34 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/typography.scss';
+
+.timeLineItem {
+    display: grid;
+  gap: 15px;
+ grid-template-areas:" time content"
+                     "scroll content";
+grid-template-columns: 37px auto;
+grid-template-rows: 50px auto ;
+
+     &__time {
+      @include titleInfo();
+      align-self: center;
+      grid-area: time;
+    }
+    &__scroll {
+      grid-area: scroll;
+      width: 5px;
+      justify-self: center;
+      background-color: $color-shamrock;
+  }
+  &__info {
+    grid-area: content;
+   
+   padding: 15px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    background-color: $color-gallery;
+    
+  }
+  }
+  
+  

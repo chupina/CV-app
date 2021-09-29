@@ -1,0 +1,13 @@
+@import '../../assets/styles/variables.scss';
+.burger{
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+   background-color: $color-oxford-blue;
+  color: $color-white;
+  border:none;
+  cursor: pointer;
+  :hover{
+    color:$color-shamrock;
+  }
+}

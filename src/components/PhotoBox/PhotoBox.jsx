@@ -1,13 +1,13 @@
 import React from "react";
-import './PhotoBox.scss';
+import "./PhotoBox.scss";
 
-export const PhotoBox = ({name, title, description, avatar, size}) => {
+export const PhotoBox = ({ name, title, description, avatar, size }) => {
   return (
-   <div className={`photoBox ${size}`}>
-         <img src={avatar} alt="authors avatar"/>
-         <h1>{name}</h1>
-     <h2>{title}</h2>
-     <p>{description}</p>
-   </div>
- )
-}
+    <div className={`photoBox ${size}`}>
+      <img className="photoBox__avatar" src={avatar} alt="user avatar" />
+      <h1 className="photoBox__header">{name}</h1>
+      <h2 className="photoBox__subheader">{title}</h2>
+      <p className="photoBox__description">{description}</p>
+    </div>
+  );
+};

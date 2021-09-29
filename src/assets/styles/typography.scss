@@ -1,0 +1,70 @@
+@mixin header($color:inherit,$align:inherit){
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 2.8rem;
+line-height: 120%;
+text-align: $align;
+color: $color;
+}
+
+@mixin subheader($color:inherit, $align:inherit){
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 1.56rem;
+line-height: 120%;
+text-align: $align;
+color: $color;
+}
+
+@mixin titleInfo ($color:inherit, $align:inherit){
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 1rem;
+line-height: 120%;
+text-align: $align;
+color: $color;
+}
+
+@mixin titleSection($color:inherit, $align:inherit) {
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 1.56rem;
+line-height: 120%;
+text-align: $align;
+color: $color;
+}
+
+@mixin text($color:inherit, $align:inherit) {
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 0.875rem;
+line-height: 150%;
+text-align: $align;
+color: $color;
+}
+
+@mixin textButton($color:inherit, $align:inherit){
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 1rem;
+line-height: 120%;
+text-align: $align;
+color: $color;
+ }
+
+ @mixin textCite($color:inherit, $align:inherit){
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 120%;
+  text-align: $align;
+  color: $color;
+   }
+

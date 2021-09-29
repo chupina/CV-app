@@ -1,0 +1,55 @@
+@import "../../assets/styles/variables.scss";
+nav {
+  height: 100%;
+  margin-top: 40px;
+}
+
+.navigation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  transition: all 0.5s linear;
+  list-style-type: none;
+  padding: 0;
+  &__item {
+    display: flex;
+    padding: 20px 0px;
+    flex-direction: row;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: $color-raven;
+  }
+  &__link {
+    display: flex;
+    text-decoration: none;
+
+    &_active {
+      color: $color-shamrock;
+    }
+
+    .icon {
+      padding-right: 20px;
+    }
+  }
+  &_text {
+    display: block;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation {
+    width: 50px;
+    align-items: center;
+    &__text {
+      display: none;
+    }
+    .icon {
+      padding-right: 0px;
+    }
+  }
+}

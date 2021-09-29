@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/typography.scss";
+address {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  .media__icon {
+    color: $color-shamrock;
+    font-size: 1.45rem;
+  }
+}
+.address {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  &__title {
+    @include titleInfo($color-oxford-blue);
+  }
+  &__url {
+    @include textButton($color-raven);
+  }
+}

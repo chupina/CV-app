@@ -1,0 +1,12 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/typography.scss";
+
+.article {
+  &__title {
+    margin: 0;
+    @include titleInfo();
+  }
+  &__content {
+    @include text();
+  }
+}

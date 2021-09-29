@@ -1,0 +1,13 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/typography.scss';
+
+.box {
+  margin: 25px 36px 35px 30px ;
+     &__title {
+    margin-bottom: 40px;
+    @include titleSection($color-shamrock); 
+      }
+  &__content {
+    @include text($color-oxford-blue, justify);
+   }
+}
