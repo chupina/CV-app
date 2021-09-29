@@ -9,6 +9,8 @@ import Feedback from "../../components/Feedback/Feedback";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { Burger } from "../../components/Burger/Burger";
+import Card from "../../components/Card/Card";
+import Portfolio from "../../components/Portfolio/Portfolio";
 
 export const Inner = () => {
   return (
@@ -76,6 +78,9 @@ export const Inner = () => {
               },
             ]}
           />
+        </Box>
+        <Box title="Portfolio">
+                   <Portfolio/>
         </Box>
         <Box title="Contacts">
           <Address />

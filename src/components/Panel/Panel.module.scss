@@ -3,6 +3,7 @@
 .panel {
   width: 250px;
   position: fixed;
+  z-index: 999;
   top: 0;
   bottom: 0;
   display: flex;
