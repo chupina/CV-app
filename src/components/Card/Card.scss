@@ -1,19 +1,21 @@
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/typography.scss";
 
-.card{
+.portfolio__card{
   position: relative;
    width: 308px;
    height: 190px;
+   margin: 10px 10px 0px 0px;
    overflow: hidden;
    background-image: url(../../assets/images/card_2.png);
+ 
   &:hover>div{
   top:0px;
     }
-    &__ui{
+    &.ui{
       background-image: url(../../assets/images/card_1.png);
     }
-    &__js{
+    &.code{
       background-image: url(../../assets/images/card_3.png);
     }
   &__info{

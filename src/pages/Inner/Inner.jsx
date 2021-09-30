@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Inner.module.scss";
+import React, { useState } from "react";
+import styles from "./Inner.scss";
 import Box from "../../components/Box/Box";
 import TimeLine from "./../../components/TimeLine/TimeLine";
 import Expertise from "../../components/Expertise/Expertise";
@@ -9,14 +9,18 @@ import Feedback from "../../components/Feedback/Feedback";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { Burger } from "../../components/Burger/Burger";
-import Card from "../../components/Card/Card";
 import Portfolio from "../../components/Portfolio/Portfolio";
 
 export const Inner = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const togglePanel = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className={styles.innerPage}>
-      <Panel />
-      <main className={styles.main__content}>
+    <div className='innerPage'>
+      <Panel isOpen={isOpen} toggle={togglePanel} />
+      <main className={`main__content ${isOpen? 'narrow' : 'wide'} `} >
         <Box title="About me">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus

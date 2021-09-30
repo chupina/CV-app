@@ -1,10 +1,9 @@
 import React from "react";
 import './Card.scss';
-const Card = ({type, content}) => {
+const Card = ({type, children}) => {
   return(
-    <div className={`card card__${type}`}>
-      <div className='card__preview'></div>
-      <div className='card__info'>Lorem ipsum</div>
+    <div className={`portfolio__card ${type}`}>
+      <div className='portfolio__card__info'>{children}</div>
     </div>
   )
 }

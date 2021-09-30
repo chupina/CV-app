@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "../Button/Button";
 import { Navigation } from "../Navigation/Navigation";
 import { PhotoBox } from "../PhotoBox/PhotoBox";
@@ -8,14 +8,11 @@ import styles from "./Panel.module.scss";
 import { Burger } from "../Burger/Burger";
 import { Link } from "react-router-dom";
 import photo from '../../assets/images/avatar.png'
-export const Panel = () => {
-  const [expanded, setExpanded] = useState(false);
-  const togglePanel = () => {
-    setExpanded(!expanded);
-  };
+export const Panel = ({isOpen, toggle}) => {
+ 
   return (
     <div
-      className={`${styles.panel} ${expanded ? styles.shrink : styles.expand}`}
+      className={`${styles.panel} ${isOpen ? styles.expand : styles.shrink}`}
     >
             <div className={styles.sidebar}>
       <PhotoBox size="medium" name="John Doe" avatar={photo} />
@@ -25,7 +22,7 @@ export const Panel = () => {
           icon={<FontAwesomeIcon icon={faChevronLeft} />}
         /></Link>
       </div>
-      <Burger clickHandler={togglePanel} ><FontAwesomeIcon icon={faBars} /></Burger>
+      <Burger clickHandler={toggle} ><FontAwesomeIcon icon={faBars} /></Burger>
     </div>
   );
 };

@@ -1,11 +1,24 @@
-.portfolio{
-  border: 3px solid red;
-  background-color: chartreuse;
-  width: 100%;
-  min-height: 350px;
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/typography.scss";
+.filter{
+  display: flex;
+  &__item{
+    &:checked+label{
+      color:$color-shamrock;
+    }
+   display: none;
+    
   }
+  label{
+    cursor: pointer;
+    &::after{
+      content: '/';
+      padding: 0 10px;
+    }
+  
+  }
+}
+.filter-container{
+  display: flex;
+  flex-wrap: wrap; 
 }
