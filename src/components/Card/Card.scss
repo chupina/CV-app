@@ -8,6 +8,7 @@
    margin: 10px 10px 0px 0px;
    overflow: hidden;
    background-image: url(../../assets/images/card_2.png);
+   border: 1px solid $color-gallery;
  
   &:hover>div{
   top:0px;

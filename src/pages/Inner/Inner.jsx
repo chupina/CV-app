@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Inner.scss";
+import "./Inner.scss";
 import Box from "../../components/Box/Box";
 import TimeLine from "./../../components/TimeLine/TimeLine";
 import Expertise from "../../components/Expertise/Expertise";
@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { Burger } from "../../components/Burger/Burger";
 import Portfolio from "../../components/Portfolio/Portfolio";
+import data from './../../services/data';
+
 
 export const Inner = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -39,73 +41,24 @@ export const Inner = () => {
           semper libero, sit amet adipiscing sem neque
         </Box>
         <Box title="Education">
-          <TimeLine
-            data={[
-              {
-                date: 2001,
-                title: "Title 0",
-                text: "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.",
-              },
-              {
-                date: 2010,
-                title: "Title 1",
-                text: "Et irure culpa ad proident labore excepteur elit dolore. Quis commodo elit culpa eiusmod dolor proident non commodo excepteur aute duis duis eu fugiat. Eu duis occaecat nulla eiusmod non esse cillum est aute elit amet cillum commodo.",
-              },
-              {
-                date: 2012,
-                title: "Title 2",
-                text: "Labore esse tempor ",
-              },
-            ]}
-          />
+          <TimeLine data={data.education}/>
         </Box>
         <Box title="Experience">
-          <Expertise
-            data={[
-              {
-                date: "2013-2014",
-                info: {
-                  company: "Google",
-                  job: "Front-end developer / php programmer",
-                  description:
-                    " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
-                },
-              },
-              {
-                date: "2012",
-                info: {
-                  company: "Twitter",
-                  job: "Web developer",
-                  description:
-                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
-                },
-              },
-            ]}
-          />
+          <Expertise data={data.expertise}/>
         </Box>
         <Box title="Portfolio">
-                   <Portfolio/>
+          <Portfolio/>
         </Box>
         <Box title="Contacts">
           <Address />
         </Box>
         <Box title="Feedbacks">
           <Feedback
-            data={[
-              {
-                feedback:
-                  " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
-                reporter: {
-                  photoUrl:
-                    'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg"',
-                  name: "John Doe",
-                  citeUrl: "https://www.citeexample.com",
-                },
-              },
-            ]}
+            data={data.feedbacks}
           />
         </Box>
         <Burger
+        className='scrollUp'
           clickHandler={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}

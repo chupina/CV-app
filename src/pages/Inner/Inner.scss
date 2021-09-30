@@ -1,12 +1,13 @@
 .innerPage {
   .main__content {
-    transition: margin-left 0.5s linear;
+   transition: margin-left 0.5s linear;
     &.narrow {
       margin-left: 255px;
     }
     &.wide {
       margin-left: 0px;
     }
+  
   }
 }
 
