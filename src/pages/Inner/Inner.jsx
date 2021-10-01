@@ -7,10 +7,10 @@ import { Panel } from "../../components/Panel/Panel";
 import Address from "../../components/Address/Address";
 import Feedback from "../../components/Feedback/Feedback";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { Burger } from "../../components/Burger/Burger";
+import { faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import data from './../../services/data';
+import ButtonSmall from './../../components/ButtonSmall/ButtonSmall';
 
 
 export const Inner = () => {
@@ -23,7 +23,7 @@ export const Inner = () => {
     <div className='innerPage'>
       <Panel isOpen={isOpen} toggle={togglePanel} />
       <main className={`main__content ${isOpen? 'narrow' : 'wide'} `} >
-        <Box title="About me">
+        <Box title="About me" id="about">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
           et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
@@ -40,31 +40,31 @@ export const Inner = () => {
           rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam
           semper libero, sit amet adipiscing sem neque
         </Box>
-        <Box title="Education">
+        <Box title="Education" id="education">
           <TimeLine data={data.education}/>
         </Box>
-        <Box title="Experience">
+        <Box title="Experience" id="experience">
           <Expertise data={data.expertise}/>
         </Box>
-        <Box title="Portfolio">
+        <Box title="Portfolio" id="portfolio">
           <Portfolio/>
         </Box>
-        <Box title="Contacts">
+        <Box title="Contacts" id="contacts">
           <Address />
         </Box>
-        <Box title="Feedbacks">
+        <Box title="Feedbacks" id="feedbacks">
           <Feedback
             data={data.feedbacks}
           />
         </Box>
-        <Burger
-        className='scrollUp'
-          clickHandler={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
+        <div className='scrollUp'>
+          <ButtonSmall
+        clickHandler={() => {window.scrollTo({ top: 0, behavior: "smooth" });}}
         >
-          <FontAwesomeIcon icon={faChevronUp} />
-        </Burger>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </ButtonSmall>
+        </div>
+        
       </main>
     </div>
   );

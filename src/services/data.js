@@ -1,5 +1,5 @@
 const data = {
-    expertise: [
+  expertise: [
     {
       date: "2019-2017",
       info: {
@@ -42,7 +42,7 @@ const data = {
     {
       date: 2015,
       title: "Title 0",
-      text: "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.",
+      text: "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolorLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
     },
     {
       date: 2010,
@@ -60,7 +60,8 @@ const data = {
       feedback:
         " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       reporter: {
-        photoUrl: "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
+        photoUrl:
+          "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
         name: "John Doe",
         citeUrl: "https://www.citeexample.com",
       },
@@ -69,7 +70,19 @@ const data = {
       feedback:
         " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       reporter: {
-        photoUrl: "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
+        photoUrl:
+          "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
+        name: "John Doe",
+        citeUrl: "https://www.citeexample.com",
+      },
+    },
+
+    {
+      feedback:
+        " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+      reporter: {
+        photoUrl:
+          "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
         name: "John Doe",
         citeUrl: "https://www.citeexample.com",
       },

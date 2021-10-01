@@ -1,7 +1,6 @@
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/typography.scss";
 nav {
- 
   height: 100%;
   margin-top: 40px;
 }
@@ -23,7 +22,10 @@ nav {
   &__link {
     display: flex;
     text-decoration: none;
-
+  &:hover{
+    color: $color-white;
+    cursor: pointer;
+  }
     &_active {
       color: $color-shamrock;
     }
@@ -46,7 +48,7 @@ nav {
       display: none;
     }
     .icon {
-      padding-right: 0px;
+      padding: 0px;
     }
   }
 }

@@ -1,18 +1,40 @@
 import React from "react";
-import './Address.scss';
+import "./Address.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhoneAlt} from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faSkype, faTwitter} from '@fortawesome/free-brands-svg-icons';
-const Address =()=>{
-  return (<div>
-    <address> <FontAwesomeIcon icon={faPhoneAlt} className='media__icon' /><a className='address' href="tel:631-229-2422"><span className='address__title'>631-229-4822</span></a></address>
-    <address> <FontAwesomeIcon icon={faEnvelope} className='media__icon' /><a className='address' href="mailto:chupina>elen@gmail.com"><span className='address__title'>chupina.elen@gmail.com</span></a></address>
-    <address> <FontAwesomeIcon icon={faTwitter} className='media__icon' /> <a className='address' href="https://www.twitter.com"><span className='address__title'>Twitter</span><span className='address__url'>https://www.twitter.com</span></a></address>
-    <address> <FontAwesomeIcon icon={faFacebookF} className='media__icon' /> <a className='address' href="https://www.facebook.com/facebook"><span className='address__title'>Facebook</span><span className='address__url'>https://www.facebook.com/facebook</span></a></address>
-    <address> <FontAwesomeIcon icon={faSkype} className='media__icon' /><a className='address' href="skype:echo123?chat"><span className='address__title'>Skype</span><span className='address__url'>Personal.name</span></a></address>
+import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookF,
+  faSkype,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+const contactData = [
+  {address:"tel:+16312294822", title:"(631) 229-4822", icon:faPhoneAlt},
+  {address:"mailto:chupina>elen@gmail.com", title:"chupina.elen@gmail.com", icon:faEnvelope},
+  {address:"https://www.twitter.com", title:"Twitter", subtitle:"https://www.twitter.com", icon:faTwitter},
+  {address:"https://www.facebook.com", title:"Facebook", subtitle:"https://www.facebook.com", icon:faFacebookF},
+  {address:"skype:echo123?chat", title:"Skype", subtitle:"my.name", icon:faSkype},
+]
+  
+
+const Address = () => {
+  return (
+    <div>
+      {
+        contactData.map(({title, address, icon, subtitle})=>{
+          return(
+            <address>
+            <FontAwesomeIcon icon={icon} className="media__icon" />
+            <a className="address" href={address}>
+              <span className="address__title">{title}</span>
+              {subtitle? <span className="address__url">{subtitle}</span> : <></> }
+            </a>
+          </address>
+          )
+        })
+      }
+     
   </div>
-    
-  )
-}
+  );
+};
 
 export default Address;

@@ -1,0 +1,18 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/typography.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__title {
+    margin: 0;
+    @include titleInfo($color-shamrock);
+  }
+  &__content {
+    @include text($color-oxford-blue);
+  }
+   &__link {
+    @include text($color-shamrock); 
+   }
+}

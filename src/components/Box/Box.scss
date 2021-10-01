@@ -2,9 +2,9 @@
 @import '../../assets/styles/typography.scss';
 
 .box {
-  margin: 25px 36px 35px 30px ;
+ padding: 25px 36px 25px 30px ;
      &__title {
-    margin-bottom: 40px;
+    margin:0 0  40px 0;
     @include titleSection($color-shamrock); 
       }
   &__content {
