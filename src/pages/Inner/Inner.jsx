@@ -9,8 +9,9 @@ import Feedback from "../../components/Feedback/Feedback";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import Portfolio from "../../components/Portfolio/Portfolio";
-import data from './../../services/data';
+import data from '../../utils/data';
 import ButtonSmall from './../../components/ButtonSmall/ButtonSmall';
+import Skills from "../../components/Skills/Skills";
 
 
 export const Inner = () => {
@@ -42,9 +43,12 @@ export const Inner = () => {
         </Box>
         <Box title="Education" id="education">
           <TimeLine data={data.education}/>
-        </Box>
+        </Box >
         <Box title="Experience" id="experience">
           <Expertise data={data.expertise}/>
+        </Box>
+        <Box title="Skills">
+          <Skills/>
         </Box>
         <Box title="Portfolio" id="portfolio">
           <Portfolio/>

@@ -1,0 +1,8 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/typography.scss';
+
+.bar{
+  @include titleInfo($color-white);
+  margin-top: 20px;
+  background-color: $color-shamrock;
+ }
