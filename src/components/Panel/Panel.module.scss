@@ -6,22 +6,22 @@
   z-index: 999;
   top: 0;
   bottom: 0;
+  left: 0;
   display: flex;
   transition: transform 0.5s linear;
   &.shrink {
-  transform: translateX(calc(-100% + 20px));
+  transform: translateX(calc(-100% + 30px));
 }
 &.expand {
   transform: translateX(0);
 }
   .sidebar {
-    
-   padding: 20px 0px;
+    padding: 20px 0px;
     background-color: $color-oxford-blue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 

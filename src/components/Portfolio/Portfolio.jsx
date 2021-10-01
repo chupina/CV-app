@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Portfolio.scss";
 import Card from "../Card/Card";
 import Isotope from "isotope-layout";
@@ -13,19 +13,19 @@ const portfolioData = [
   },
   {
     type: "code",
-    title: "Some text",
+    title: "Another text",
     text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
     url: "https://somesite.com",
   },
   {
     type: "ui",
-    title: "Some text",
+    title: "Some new text",
     text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
     url: "https://somesite.com",
   },
   {
     type: "code",
-    title: "Some text",
+    title: "Text",
     text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
     url: "https://somesite.com",
   },
@@ -61,7 +61,7 @@ const Portfolio = () => {
       <div className="filter">
      { filterData.map( ({id, key, value})=>{
        return(
-        <div className="filter__item">
+        <div className="filter__item" key={id}>
           <input
             className="filter__input"
             type="radio"
@@ -81,7 +81,7 @@ const Portfolio = () => {
       <div className="filter-container">
         {portfolioData.map(({ title, text, url, type }) => {
           return (
-            <Card type={type}>
+            <Card key={title} type={type}>
               <CardInfo
                 title={title}
                 text={text}

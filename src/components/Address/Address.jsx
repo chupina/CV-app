@@ -22,7 +22,7 @@ const Address = () => {
       {
         contactData.map(({title, address, icon, subtitle})=>{
           return(
-            <address>
+            <address key={address}>
             <FontAwesomeIcon icon={icon} className="media__icon" />
             <a className="address" href={address}>
               <span className="address__title">{title}</span>

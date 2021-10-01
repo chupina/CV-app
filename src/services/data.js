@@ -21,7 +21,7 @@ const data = {
     {
       date: "2016",
       info: {
-        company: "Google",
+        company: "Googie",
         job: "Front-end developer / php programmer",
         description:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
@@ -62,7 +62,7 @@ const data = {
       reporter: {
         photoUrl:
           "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
-        name: "John Doe",
+        name: "Anonymous",
         citeUrl: "https://www.citeexample.com",
       },
     },
@@ -83,7 +83,7 @@ const data = {
       reporter: {
         photoUrl:
           "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
-        name: "John Doe",
+        name: "User_123",
         citeUrl: "https://www.citeexample.com",
       },
     },

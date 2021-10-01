@@ -10,7 +10,7 @@ import {
   faBriefcase,
   faComment,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link, Events, animateScroll as scroll } from "react-scroll";
+import { Link, Events } from "react-scroll";
 
 const navigationData = [
   { text: "About me", icon: faUser, path: "about" },
@@ -43,7 +43,7 @@ export const Navigation = () => {
     <nav>
       <ul className="navigation">
         {navigationData.map(({ icon, text, path }) => (
-          <li className="navigation__item">
+          <li className="navigation__item" key={path}>
             <Link
               activeClass="navigation__link_active"
               className="navigation__link"
@@ -51,6 +51,7 @@ export const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
+              offset={-150}
             >
               <span className="icon">
                 <FontAwesomeIcon icon={icon} />
