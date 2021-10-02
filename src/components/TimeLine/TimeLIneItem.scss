@@ -1,9 +1,10 @@
-@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/colors.scss';
 @import '../../assets/styles/typography.scss';
+@import "../../assets/styles/sizes.scss";
 
 .timeLineItem {
-    display: grid;
-  gap: 15px;
+ display: grid;
+gap: $indent-s;
  grid-template-areas:" time content"
                      "scroll content";
 grid-template-columns: 37px auto;
@@ -16,17 +17,28 @@ grid-template-rows: 50px auto ;
     }
     &__scroll {
       grid-area: scroll;
-      width: 5px;
+      width: $indent-xxs;
       justify-self: center;
-      background-color: $color-shamrock;
+      background-color: $highlight;
   }
   &__info {
     grid-area: content;
-   
-   padding: 15px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    background-color: $color-gallery;
+   position: relative;
+   padding: $indent-s;
+    margin-left: $indent-m;
+    margin-bottom: $indent-xs;
+    background-color: $gallery;
+    &::before{
+      position: absolute;
+      left: -$indent-xs;
+      top:$indent-m;
+      content:'';
+      width: 0; 
+  height: 0; 
+  border-top: $indent-xxs solid transparent;
+  border-bottom: $indent-xxs solid transparent; 
+  border-right:$indent-xs solid $gallery; 
+    }
     
   }
   }

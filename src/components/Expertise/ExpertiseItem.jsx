@@ -5,14 +5,12 @@ import "./ExpertiseItem.scss";
 const ExpertiseItem = ({ data }) => {
   return (
     <div className="expertiseItem">
-      <div className="expertiseItem__date">{data.date}</div>
+      <time className="expertiseItem__date">{data.date}</time>
       <div className="expertiseItem__company">{data.info.company}</div>
-      <Article
-        className="expertiseItem__info"
-        title={data.info.job}
-        text={data.info.description}
-      />
-    </div>
+      <div className="expertiseItem__info">
+  <Article title={data.info.job} text={data.info.description} />
+</div>
+      </div>
   );
 };
 

@@ -47,7 +47,7 @@ export const Inner = () => {
         <Box title="Experience" id="experience">
           <Expertise data={data.expertise}/>
         </Box>
-        <Box title="Skills">
+        <Box title="Skills" id="skills">
           <Skills/>
         </Box>
         <Box title="Portfolio" id="portfolio">
@@ -68,7 +68,6 @@ export const Inner = () => {
           <FontAwesomeIcon icon={faChevronRight} />
         </ButtonSmall>
         </div>
-        
       </main>
     </div>
   );

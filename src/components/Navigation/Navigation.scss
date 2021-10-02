@@ -1,23 +1,26 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+@import "../../assets/styles/animation.scss";
+
 nav {
-  height: 100%;
-  margin-top: 40px;
+  height: $width-xl;
+  margin-top: $indent-title;
 }
 
 .navigation {
-  width: 250px;
-   height: 100%;
+  width: $menu-open;
+   height: $width-xl;
   display: flex;
   flex-direction: column;
-   transition: all 0.5s linear;
+   transition: all $animation-speed-normal $animation-style-base;
   list-style-type: none;
-  padding: 0;
+  padding: $indent-min;
   &__item {
     display: flex;
-    padding: 20px 0 0 0 ;
+    padding: $indent-m $indent-min $indent-min $indent-min ;
     flex-direction: row;
-    @include textButton($color-raven)
+    @include textButton($base-gray)
   }
   &__link {
     display: flex;
@@ -27,28 +30,28 @@ nav {
     cursor: pointer;
   }
     &_active {
-      color: $color-shamrock;
+      color: $highlight;
     }
 
   .icon {
-      padding:0px 20px;
+      padding:$indent-min $indent-m;
     }
   }
   &__text {
-    width: 195px;
-        display: block;
+          display: block;
  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $media-mobile) {
   .navigation {
-    width: 55px;
+    width: $menu-closed;
     align-items: center;
+   
     &__text {
       display: none;
     }
     .icon {
-      padding: 0px;
+      padding: $indent-min;
     }
   }
 }

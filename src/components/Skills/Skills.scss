@@ -1,8 +1,9 @@
-@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/colors.scss';
 @import '../../assets/styles/typography.scss';
+@import "../../assets/styles/sizes.scss";
 
 .bar{
   @include titleInfo($color-white);
-  margin-top: 20px;
-  background-color: $color-shamrock;
+  margin-top: $indent-m;
+  background-color: $highlight;
  }

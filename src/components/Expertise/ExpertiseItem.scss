@@ -1,23 +1,24 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
 
 .expertiseItem {
-  width: 100%;
-  margin-bottom: 30px;
+  width: $width-xl;
+  margin-bottom: $indent-l;
   display: grid;
   grid-template-areas:
     "company content"
     "date content";
   grid-template-columns: 85px auto;
-  grid-template-rows: min-content max-content;
-  gap: 5px 30px;
+  grid-template-rows: $indent-m auto;
+  gap: $indent-xxs $indent-l;
   &__date {
     grid-area: date;
-    @include textButton($color-raven);
+    @include textButton($base-gray);
   }
   &__company {
     grid-area: company;
-    @include titleInfo($color-oxford-blue);
+    @include titleInfo($base-dark);
   }
   &__info {
     grid-area: content;

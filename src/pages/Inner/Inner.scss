@@ -1,30 +1,33 @@
+@import "../../assets/styles/sizes.scss";
+@import "../../assets/styles/animation.scss";
+
 .innerPage {
   .main__content {
     display: flex;
     flex-direction: column;
-    transition: margin-left 0.5s linear;
-    margin-top: 15px;
+    transition: margin-left $animation-speed-normal $animation-style-base;
+    margin-top: $indent-s;
     &.narrow {
-      margin-left: 255px;
+      margin-left: $menu-open;
     }
     &.wide {
-      margin-left: 0px;
+      margin-left: $indent-min;
     }
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $media-mobile) {
   .innerPage {
     .main__content {
       &.narrow {
-        margin-left: 55px;
+        margin-left: $menu-closed;
       }
     }
   }
 }
 
 .scrollUp{
-  margin-right: 36px;
+  margin-right: $indent-xl;
  align-self: flex-end;
  transform:rotate(-90deg);
 }

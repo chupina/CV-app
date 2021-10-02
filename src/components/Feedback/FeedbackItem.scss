@@ -1,31 +1,34 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
 .feedback {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: $indent-title;
   &__text {
     margin: 0;
-    width: 100%;
+    width: $width-xl;
   }
   &__caption {
-    margin-top: 20px;
+    margin-top: $indent-m;
     display: flex;
     align-items: center;
   }
   &__cite {
-    margin-left: 20px;
+    margin-left: $indent-m;
     display: flex;
+    flex-wrap: wrap;
     a {
       text-decoration: none;
-      padding: 0px 5px;
-      @include textCite($color-shamrock);
+      padding: $indent-min $indent-xxs;
+      @include textCite($highlight);
     }
     h3 {
-      @include textCite($color-oxford-blue);
+      @include textCite($base-dark);
       margin: 0;
     }
   }
 }
+

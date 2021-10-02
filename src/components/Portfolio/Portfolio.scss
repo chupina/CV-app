@@ -1,11 +1,12 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
 .filter{
   display: flex;
-  padding-bottom: 10px;
+  padding-bottom: $indent-xs;
   &__input{
     &:checked+label{
-      color:$color-shamrock;
+      color:$highlight;
     }
    display: none;
    
@@ -17,8 +18,8 @@
   }
   &__item + &__item > label:before {
     content: '/';
-        color: $color-oxford-blue;
-        padding: 0 5px;
+        color: $base-dark;
+        padding: 0 $indent-xxs;
   }
 }
 

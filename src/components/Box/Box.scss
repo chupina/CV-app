@@ -1,13 +1,14 @@
-@import '../../assets/styles/variables.scss';
-@import '../../assets/styles/typography.scss';
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
 
 .box {
- padding: 25px 36px 25px 30px ;
+ padding: $indent-m $indent-xl $indent-m $indent-l ;
      &__title {
-    margin:0 0  40px 0;
-    @include titleSection($color-shamrock); 
+    margin:$indent-min $indent-min  $indent-title $indent-min;
+    @include titleSection($highlight, left); 
       }
   &__content {
-    @include text($color-oxford-blue, justify);
+    @include text($base-dark, justify);
    }
 }

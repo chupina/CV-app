@@ -1,12 +1,14 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
 
 .article {
   &__title {
-    margin: 0;
-    @include titleInfo();
+    margin: $indent-min;
+    @include titleInfo(inherit, left);
   }
   &__content {
+    margin: $indent-xxs $indent-min;
     @include text();
   }
 }

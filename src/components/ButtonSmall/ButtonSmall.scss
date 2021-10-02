@@ -1,14 +1,17 @@
-@import '../../assets/styles/variables.scss';
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
 .burger{
-  width: 30px;
-  height: 30px;
-  margin-top: 20px;
-   background-color: $color-oxford-blue;
+  width: $indent-l;
+  height: $indent-l;
+  margin-top: $indent-m;
+   background-color: $base-dark;
   color: $color-white;
-  border-radius:0px 5px 5px 0px;
+  border-radius:$indent-min $indent-xxs $indent-xxs $indent-min;
   border:none;
   cursor: pointer;
    :hover{
-    color:$color-shamrock;
+    color:$highlight;
   }
 }

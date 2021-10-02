@@ -1,4 +1,4 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
 
 .card {
@@ -7,12 +7,12 @@
   justify-content: space-between;
   &__title {
     margin: 0;
-    @include titleInfo($color-shamrock);
+    @include titleInfo($highlight);
   }
   &__content {
-    @include text($color-oxford-blue);
+    @include text($base-dark);
   }
    &__link {
-    @include text($color-shamrock); 
+    @include text($highlight); 
    }
 }

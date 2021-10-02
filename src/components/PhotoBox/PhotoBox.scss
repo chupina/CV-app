@@ -1,12 +1,13 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
 
 .photoBox {
   display: flex;
  max-width: 500px;
   flex-direction: column;
   align-items: center;
- margin: 20px;
+ margin-top: $indent-m;
   color: $color-white;
   text-align: center;
   &__avatar {
@@ -17,15 +18,15 @@
 
 .large {
   .photoBox__avatar {
-    max-width: 163px;
+    max-width: $photo-l;
   }
   .photoBox__header {
-    margin: 5px 0;
+    margin: $indent-xxs $indent-min;
     @include header();
   }
   .photoBox__subheader {
     @include subheader();
-    margin: 5px 0;
+    margin: $indent-xxs $indent-min;
   }
   .photoBox__description {
     @include text();
@@ -34,7 +35,7 @@
 
 .medium {
   .photoBox__avatar {
-    max-width: 100px;
+    max-width: $photo-m;
   }
   .photoBox__header {
     @include titleInfo();
@@ -47,7 +48,7 @@
 
 .small {
   .photoBox__avatar {
-    max-width: 40px;
+    max-width: $photo-s;
   }
   .photoBox__header,
   .photoBox__subheader,
@@ -56,18 +57,13 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $media-mobile) {
   .large {
-    .photoBox__avatar {
-      max-width: 163px;
-    }
-    .photoBox__header {
-      margin: 5px 0;
-      @include subheader();
+      .photoBox__header {
+       @include subheader();
     }
     .photoBox__subheader {
       @include titleInfo();
-      margin: 5px 0;
     }
     .photoBox__description {
       @include text();

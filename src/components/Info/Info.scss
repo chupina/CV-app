@@ -1,7 +1,10 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
 .info {
-  padding: 15px;
-  background-color: $color-gallery;
+  margin: $indent-min;
+  padding: $indent-s;
+  background-color: $gallery;
   @include text();
 }

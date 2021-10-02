@@ -1,22 +1,23 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/colors.scss";
 @import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
 
 .button{
-  padding: 10px 20px;
-  background-color: $color-oxford-blue;
-  border-radius: 5px;
+  padding: $indent-xs $indent-m;
+  background-color: $base-dark;
+  border-radius: $indent-xxs;
   border: none;
   @include textButton($color-white, center);
   cursor:pointer;
   &:hover{
-    background-color: $color-shamrock;
+    background-color: $highlight;
   }
   & span{
-    margin-left: 10px;
+    margin-left: $indent-xs;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $media-mobile) {
  .button span:nth-child(2){
     display: none;
   }   

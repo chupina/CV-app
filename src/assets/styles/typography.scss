@@ -1,69 +1,81 @@
+@import "../../assets/styles/colors.scss";
+$main-font:'Open Sans';
+
+$text-xs:0.75rem;
+$text-s:0.875rem;
+$text-regular:1rem;
+$text-l:1.56rem;
+$text-xl:2.8rem;
+
+$line-normal:120%;
+$line-big:150%;
+
 @mixin header($color:inherit,$align:inherit){
-font-family: Open Sans;
+font-family: $main-font;
 font-style: normal;
 font-weight: bold;
-font-size: 2.8rem;
-line-height: 120%;
+font-size: text-xl;
+line-height: $line-normal;
 text-align: $align;
 color: $color;
 }
 
 @mixin subheader($color:inherit, $align:inherit){
-font-family: Open Sans;
+font-family: $main-font;
 font-style: normal;
 font-weight: 600;
-font-size: 1.56rem;
-line-height: 120%;
+font-size: $text-l;
+line-height: $line-normal;
 text-align: $align;
 color: $color;
 }
 
 @mixin titleInfo ($color:inherit, $align:inherit){
-font-family: Open Sans;
+font-family: $main-font;
 font-style: normal;
 font-weight: bold;
-font-size: 1rem;
-line-height: 120%;
+font-size: $text-regular;
+line-height: $line-normal;
 text-align: $align;
 color: $color;
 }
 
 @mixin titleSection($color:inherit, $align:inherit) {
-font-family: Open Sans;
+font-family: $main-font;
 font-style: normal;
 font-weight: bold;
-font-size: 1.56rem;
-line-height: 120%;
+font-size: $text-l;
+line-height: $line-normal;
 text-align: $align;
 color: $color;
 }
 
 @mixin text($color:inherit, $align:inherit) {
-font-family: Open Sans;
+font-family: $main-font;
 font-style: normal;
 font-weight: normal;
-font-size: 0.875rem;
+font-size: $text-s;
 line-height: 150%;
 text-align: $align;
 color: $color;
 }
 
 @mixin textButton($color:inherit, $align:inherit){
-font-family: Open Sans;
+font-family: $main-font;
 font-style: normal;
 font-weight: normal;
-font-size: 1rem;
-line-height: 120%;
+font-size: $text-regular;
+line-height: $line-normal;
 text-align: $align;
 color: $color;
  }
 
  @mixin textCite($color:inherit, $align:inherit){
-  font-family: Open Sans;
+  font-family: $main-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.75rem;
-  line-height: 120%;
+  font-size: $text-xs;
+  line-height: $line-normal;
   text-align: $align;
   color: $color;
    }
