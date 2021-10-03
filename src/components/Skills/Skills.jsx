@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSkills, addSkills} from '../../features/skills/skillsSlice';
 import "./Skills.scss";
 import { Button } from './../Button/Button';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen} from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -38,7 +40,9 @@ const  Skills = () => {
   
   return (
     <>
-    <form onSubmit={formik.handleSubmit}>
+    <div className='edit__wrapper'>
+    <div className='skills__edit'><Button icon={<FontAwesomeIcon  icon={faPen}/>} text="Open edit"/> </div>
+    <form className="skills__form" onSubmit={formik.handleSubmit}>
     <label htmlFor="skillNameName">Skill Name</label>
     <input
       id="skillName"
@@ -70,6 +74,9 @@ const  Skills = () => {
    
     <button type="submit" disabled={!formik.isValid}>Add skill</button>
   </form>
+
+    </div>
+    
   {data.map((item)=><div className='bar' style={{width:`${item.skills.item.level}%`}}>{item.skills.item.title}</div>)}
   </>
     
