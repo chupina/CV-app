@@ -1,0 +1,13 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/animation.scss";
+@import "../../assets/styles/sizes.scss";
+.loader{
+  color: $highlight;
+  font-size: $indent-l;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}

@@ -28,12 +28,13 @@ export default function serverSetup () {
             text: "Labore esse tempor ",
           },
         ]
-      )
+      ),
+      { timing: 3000 }
       )
 
       this.get("/api/skills", (schema) => {
         return schema.skills.all()
-      })
+      },{ timing: 3000 })
 
       this.post("/api/skills", (schema, request) => {
         let attrs = JSON.parse(request.requestBody)

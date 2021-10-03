@@ -17,16 +17,22 @@ export const fetchEducation = createAsyncThunk(
 export const educationSlice = createSlice(
     {
         name:'education',
-        initialState:{entities: [], loading: false},
+        initialState:{entities: [], loading: false, error:false},
         reducers:{},
         extraReducers: (builder) => {
         builder.addCase(fetchEducation.fulfilled, (state, action) => {
             state.entities = action.payload;
             state.loading = false;
+            state.error = false;
             })
         builder.addCase(fetchEducation.pending, (state, action) => {
             state.loading = true;
+            state.error = false;
                })
+        builder.addCase(fetchEducation.rejected, (state, action) => {
+            state.loading = false;
+            state.error= true
+                })
           },
     }
 )
