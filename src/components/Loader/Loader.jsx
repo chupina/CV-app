@@ -5,6 +5,6 @@ import {
   faSyncAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Loader = () => <FontAwesomeIcon className='loader' icon={faSyncAlt}/>;
+const Loader = () =><div className='wrapper'><FontAwesomeIcon className='loader' icon={faSyncAlt}/></div> ;
 
 export default Loader;

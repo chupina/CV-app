@@ -35,15 +35,13 @@ export const fetchSkills = createAsyncThunk(
 
 const skillsSlice = createSlice({
   name: "skills",
-  initialState: { entities: [{skills:{
-    item:{
-      title:'HTML',
-    level:45
-    }
-  }
-    
-  }], loading: false },
-  reducers: {},
+  initialState: { entities: [], 
+  loading: false,
+  edit: false,
+ },
+  reducers: {toggleEdit(state, action){
+    state.edit = !state.edit;
+}},
   extraReducers: (builder) => {
     builder.addCase(addSkills.fulfilled, (state, action) => {
       state.entities.push(action.payload)
@@ -67,5 +65,5 @@ const skillsSlice = createSlice({
     });
   },
 });
-
+export const {toggleEdit} = skillsSlice.actions
 export default skillsSlice.reducer;

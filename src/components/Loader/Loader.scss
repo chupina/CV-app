@@ -1,6 +1,16 @@
 @import "../../assets/styles/colors.scss";
 @import "../../assets/styles/animation.scss";
 @import "../../assets/styles/sizes.scss";
+
+.wrapper{
+  width: 100%;
+  min-height: $height-s;
+  max-height: $height-l;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 .loader{
   color: $highlight;
   font-size: $indent-l;

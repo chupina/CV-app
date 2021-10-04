@@ -1,25 +1,118 @@
-@import '../../assets/styles/colors.scss';
-@import '../../assets/styles/typography.scss';
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
 @import "../../assets/styles/sizes.scss";
 
-.skills__form{
-  
-  display:flex;
+.chart__ruler {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 1px solid $base-gray;
+  border-top: none;
+  @include textCite($base-gray);
+  &::before {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    content: "Beginner";
+    padding-top: $indent-xs;
+  }
+  &::after {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    padding-top: $indent-xs;
+    content: "Master";
+  }
+}
+.chart {
+  margin-top: $indent-title;
+  margin-bottom: $indent-m;
+  &__bar {
+    @include titleInfo($base-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: $indent-xxs $indent-s;
+    margin-bottom: $indent-s;
+    background-color: $highlight;
+  }
+  &__range {
+    position: relative;
+    width: 60%;
+    height: $indent-xs;
+    border: 1px solid $base-gray;
+    border-top: none;
+    border-bottom: none;
+    &::before {
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      content: "Proficient";
+      padding-top: $indent-xs;
+    }
+    &::after {
+      position: absolute;
+      top: 100%;
+      right: -20px;
+      padding-top: $indent-xs;
+      content: "Expert";
+    }
+  }
+}
+
+.skills__form {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-
+  padding: $indent-m;
 }
 
-.skills__edit{
-  position:absolute;
-  top: $indent-m ;
- right: $indent-xl;
- 
+.skills__edit {
+  position: absolute;
+  top: $indent-m;
+  right: $indent-xl;
 }
 
-.bar{
-  @include titleInfo($color-white);
-  margin-top: $indent-m;
-  background-color: $highlight;
- }
-
+.skills__form {
+  width: $width-xl;
+  padding: $indent-xs $indent-s;
+  border: 1px solid $highlight;
+  &-field {
+    display: flex;
+    align-items: center;
+    @include text($base-dark, left);
+  }
+  &-input {
+    width: $width-xl;
+    max-width: $input-width;
+    height: $input-height;
+    padding: $indent-xs $indent-xs;
+    margin: $indent-xs $indent-m;
+    &.danger {
+      color: $error;
+      border: 1px solid $error;
+    }
+    &::placeholder {
+      @include textCite($base-gray, left);
+    }
+  }
+  &-submit {
+    padding: $indent-xs $indent-m;
+    margin: $indent-xs $indent-min;
+    background-color: $highlight;
+    border-radius: $indent-xxs;
+    border: none;
+    @include textButton($color-white, center);
+    cursor: pointer;
+    &:hover {
+      background-color: $highlight;
+    }
+    &:disabled {
+      background-color: $base-gray;
+      color: $base-dark;
+    }
+  }
+  &__validation-error {
+    color: $error;
+  }
+}
