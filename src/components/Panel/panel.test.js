@@ -31,14 +31,14 @@ test('rendering sidebar properly', () => {
 //  expect(sectionContacts.length).toBe(0); 
  })
 
-// test('go back to home page', () => {
-//   const history = createMemoryHistory()
-//   render(
-//     <Router history={history}>
-//       <Panel />
-//     </Router>,
-//   )
-//   fireEvent.click(screen.getByText(/Go back/))
-//   expect(screen.getByText(/Programmer. Creative. Innovator/)).toBeInTheDocument()
-//   expect(screen.getByText(/My Name/)).toBeInTheDocument()
-// })
+test('go back to home page', () => {
+  const history = createMemoryHistory()
+  render(
+    <Router history={history}>
+      <Panel />
+    </Router>,
+  )
+  fireEvent.click(screen.getByText(/Go back/))
+  expect(screen.getByText(/Programmer. Creative. Innovator/)).toBeInTheDocument()
+  expect(screen.getByText(/My Name/)).toBeInTheDocument()
+})
