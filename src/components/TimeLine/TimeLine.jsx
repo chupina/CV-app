@@ -15,8 +15,6 @@ const TimeLine = () => {
     dispatch(fetchEducation());
   }, []);
 
-  console.log("Data", data);
-
   return (
     <div className="timeLine">
       {isFetching ? <Loader />: error ? <div>Something went wrong. Please review your server connection</div>:
