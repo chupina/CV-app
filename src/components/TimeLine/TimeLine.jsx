@@ -15,7 +15,7 @@ const TimeLine = () => {
     dispatch(fetchEducation());
   }, []);
 
-  console.log("D", data);
+  console.log("Data", data);
 
   return (
     <div className="timeLine">

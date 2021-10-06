@@ -1,12 +1,28 @@
+
 import { createServer, Model } from "miragejs";
 
+
+
+const getDataFromStorage = (data) => JSON.parse(localStorage.getItem(data));
+ const setDataToStorage = (key, data) => localStorage.setItem(key, JSON.stringify( data));
+
 export default function serverSetup () {
-  createServer({
+  const server = createServer({
     models: {
-      skills: Model,
+      education:Model,
+      skill: Model,
+    },
+    seeds(server) {
+      const prelodedData = getDataFromStorage('skills');
+      console.log("datafrom store", prelodedData)
+      if(prelodedData){
+        prelodedData.forEach(skill=>{
+          console.log('skill', skill)
+          server.create('skill', skill)})
+      }
     },
     routes() {
-      this.get("/api/reminders", () => ([
+      this.get("/api/educations", () => ([
           {
             date: 2021,
             title: "EPAM UpSkill",
@@ -37,10 +53,18 @@ export default function serverSetup () {
       },{ timing: 3000 })
 
       this.post("/api/skills", (schema, request) => {
-        let attrs = JSON.parse(request.requestBody)
-
-        return schema.skills.create(attrs)
+     let attrs = JSON.parse(request.requestBody)
+    let skillsFromLocalStore = getDataFromStorage('skills') ||  [];
+      skillsFromLocalStore.push({ ...attrs });
+       setDataToStorage('skills', skillsFromLocalStore)
+      return schema.skills.create(attrs)
       })
     },
+    
   });
+  
 }
+
+
+
+

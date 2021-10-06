@@ -7,7 +7,9 @@ import { toggleEdit } from "../../features/skills/skillsSlice";
 import "./Skills.scss";
 import { Button } from './../Button/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenSquare} from "@fortawesome/free-solid-svg-icons";
+import {faEdit} from "@fortawesome/free-solid-svg-icons";
+import Chart from "../Chart/Chart";
+
 
 const EditForm = () =>{
   const dispatch = useDispatch();
@@ -19,7 +21,7 @@ const EditForm = () =>{
     validationSchema: Yup.object({
      title: Yup.string()
        .required('Skill name is a required field'),
-   level: Yup.number()
+   level: Yup.number().typeError('Skill range has to be a number')
         .min(10, 'Must be greater than oe equal to 10')
         .max(100, 'Must be less than oe equal to 100')
         .required('Skill range is a required field'),
@@ -70,15 +72,7 @@ const EditForm = () =>{
   )
 }
 
-const Chart =({data}) => {
-  
-return (
-  <div className='chart'>
- {data.map((item)=><div className='chart__bar' style={{width:`${item.skills.item.level}%`}}>{item.skills.item.title}</div>)}
-   <div className='chart__ruler'><div className='chart__range'></div></div> 
-  </div>
-)
-}
+
 
 const  Skills = () => {
 
@@ -88,18 +82,17 @@ const  Skills = () => {
   useEffect(()=>{dispatch(fetchSkills())},[dispatch]);
 
   const toggle = () => dispatch(toggleEdit())
-       
+     console.log("chart data",data)  
   return (
     <>
     <div className='edit__wrapper'>
-    <div className='skills__edit'><Button icon={<FontAwesomeIcon  icon={faPenSquare}/>} text={editMode? 'Close edit' : 'Open edit'} onClick={()=>toggle()}/> </div>
+    <div className='skills__edit'><Button icon={<FontAwesomeIcon  icon={faEdit}/>} text={editMode? 'Close edit' : 'Open edit'} onClick={()=>toggle()}/> </div>
    {editMode? <EditForm/>
   :<></> } 
 
     </div>
- 
-  <Chart data={data}/>
-  </>
+ <Chart data={data}/>
+</>
   );
 };
 

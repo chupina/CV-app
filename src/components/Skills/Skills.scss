@@ -2,63 +2,6 @@
 @import "../../assets/styles/typography.scss";
 @import "../../assets/styles/sizes.scss";
 
-.chart__ruler {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  border: 1px solid $base-gray;
-  border-top: none;
-  @include textCite($base-gray);
-  &::before {
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    content: "Beginner";
-    padding-top: $indent-xs;
-  }
-  &::after {
-    position: absolute;
-    top: 100%;
-    right: 0%;
-    padding-top: $indent-xs;
-    content: "Master";
-  }
-}
-.chart {
-  margin-top: $indent-title;
-  margin-bottom: $indent-m;
-  &__bar {
-    @include titleInfo($base-white);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: $indent-xxs $indent-s;
-    margin-bottom: $indent-s;
-    background-color: $highlight;
-  }
-  &__range {
-    position: relative;
-    width: 60%;
-    height: $indent-xs;
-    border: 1px solid $base-gray;
-    border-top: none;
-    border-bottom: none;
-    &::before {
-      position: absolute;
-      top: 100%;
-      left: -20px;
-      content: "Proficient";
-      padding-top: $indent-xs;
-    }
-    &::after {
-      position: absolute;
-      top: 100%;
-      right: -20px;
-      padding-top: $indent-xs;
-      content: "Expert";
-    }
-  }
-}
 
 .skills__form {
   display: flex;

@@ -29,7 +29,8 @@ export const fetchSkills = createAsyncThunk(
   'skills/fetchSkills',
     async (thunkApi) => {
         const response = await fetchSkillsData();
-        return response
+        console.log("server response", response)
+        return response;
   }
 );
 
@@ -44,7 +45,7 @@ const skillsSlice = createSlice({
 }},
   extraReducers: (builder) => {
     builder.addCase(addSkills.fulfilled, (state, action) => {
-      state.entities.push(action.payload)
+      state.entities.push(action.payload.skill)
       state.loading = false;
     });
     builder.addCase(addSkills.pending, (state, action) => {
@@ -55,6 +56,7 @@ const skillsSlice = createSlice({
     });
 
     builder.addCase(fetchSkills.fulfilled, (state, action) => {
+      state.entities.push(...action.payload.skills)
       state.loading = false;
     });
     builder.addCase(fetchSkills.pending, (state, action) => {

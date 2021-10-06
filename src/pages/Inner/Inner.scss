@@ -7,7 +7,7 @@
     flex-direction: column;
     transition: margin-left $animation-speed-normal $animation-style-base;
     margin-top: $indent-s;
-    &.narrow {
+     &.narrow {
       margin-left: $menu-open;
     }
     &.wide {

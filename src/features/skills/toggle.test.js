@@ -7,5 +7,5 @@ test('should toggle state true', () => {
 
 test('should toggle state false', () => {
     const previousState = {edit:false}
-    expect(reducer(previousState, toggleEdit(false))).toEqual({edit:true})
+    expect(reducer(previousState, toggleEdit())).toEqual({edit:true})
   })

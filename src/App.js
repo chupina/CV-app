@@ -1,6 +1,5 @@
 import "./App.scss";
-import { Route, Switch} from 'react-router-dom'
-
+import { Route, Switch, Redirect} from 'react-router-dom'
 import { Home } from "./pages/Home/Home";
 import { Inner } from "./pages/Inner/Inner";
 function App() {
@@ -13,6 +12,9 @@ function App() {
       <Route  path="/inner">
         <Inner/>
        </Route>
+       <Route path="*">
+        <Redirect to='/'/>
+      </Route>
       </Switch>
            
       
