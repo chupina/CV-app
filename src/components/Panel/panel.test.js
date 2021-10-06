@@ -38,7 +38,7 @@ test('go back to home page', () => {
       <Panel />
     </Router>,
   )
-  fireEvent.click(screen.getByText(/Go back/))
+  fireEvent.click(screen.getByText(/back/))
   expect(screen.getByText(/Programmer. Creative. Innovator/)).toBeInTheDocument()
   expect(screen.getByText(/My Name/)).toBeInTheDocument()
 })
