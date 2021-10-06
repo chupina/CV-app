@@ -61,13 +61,13 @@
       "!/src/utils/",
       "!/src/services/",
       "!/scr/store/",
-      "!WebVitals.js"
+      "!/src/WebVitals.js"
     ],
-    "husky":{
-     "hooks":{
-       "pre-commit":"npm run test",
-       "pre-push":"npm run test"
-     }
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run test",
+        "pre-push": "npm run test"
+      }
     },
     "coverageThreshold": {
       "global": {
