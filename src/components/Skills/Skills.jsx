@@ -10,9 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import Chart from "../Chart/Chart";
 
-const EditForm = () => {
-  const isPending = useSelector((state) => state.skills.loading);
-  const dispatch = useDispatch();
+const EditForm = ({isLoading}) => {
+    const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -79,7 +78,7 @@ const EditForm = () => {
       <button
         type="submit"
         className="skills__form-submit"
-        disabled={!formik.isValid || !formik.dirty || isPending}
+        disabled={!formik.isValid || !formik.dirty ||  isLoading}
       >
         Add skill
       </button>
@@ -89,8 +88,8 @@ const EditForm = () => {
 
 const Skills = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.skills.entities);
-   const editMode = useSelector((state) => state.skills.edit);
+  const {entities, edit, loading} = useSelector((state) => state.skills);
+   
    useEffect(() => {
     dispatch(fetchSkills());
   }, [dispatch]);
@@ -102,13 +101,13 @@ const Skills = () => {
         <div className="skills__edit">
           <Button
             icon={<FontAwesomeIcon icon={faEdit} />}
-            text={editMode ? "Close edit" : "Open edit"}
+            text={edit ? "Close edit" : "Open edit"}
             onClick={() => toggle()}
           />{" "}
         </div>
-        {editMode ? <EditForm /> : <></>}
+        {edit ? <EditForm isLoading={loading} /> : <></>}
       </div>
-      <Chart data={data} />
+      <Chart data={entities} />
     </>
   );
 };
