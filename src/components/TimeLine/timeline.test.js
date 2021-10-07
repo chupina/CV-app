@@ -1,7 +1,7 @@
 import React from "react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
-import { render, fireEvent, screen, waitFor } from "../../utils/testUtils";
+import { render,screen, waitFor } from "../../utils/testUtils";
 import { BrowserRouter } from "react-router-dom";
 import TimeLine from "./TimeLine";
 

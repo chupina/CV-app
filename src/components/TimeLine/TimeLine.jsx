@@ -4,6 +4,7 @@ import { fetchEducation } from "../../features/education/educationSlice";
 import Loader from "../Loader/Loader";
 import "./TimeLine.scss";
 import TimeLineItem from "./TimeLineItem";
+import ErrorMsg from './../ErrorMsg/ErrorMsg';
 
 const TimeLine = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const TimeLine = () => {
 
   return (
     <div className="timeLine">
-      {isFetching ? <Loader />: error ? <div>Something went wrong. Please review your server connection</div>:
+      {isFetching ? <Loader />: error ? <ErrorMsg message="Something went wrong. Please review your server connection"/>:
       data.map((item) => (
         <TimeLineItem key={item.title} {...item} />
       ))}

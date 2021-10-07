@@ -1,0 +1,6 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+.error{
+  @include text($error);
+}
+
