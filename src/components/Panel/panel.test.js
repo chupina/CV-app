@@ -13,8 +13,7 @@ test('rendering sidebar properly', () => {
     </Router>,
   )
   // verify page content for expected route
-   
-  
+     
   const sectionAbout = screen.getAllByText(/About/);
   const sectionEducation = screen.getAllByText(/Education/);
   const sectionExperience = screen.getAllByText(/Experience/);
@@ -27,18 +26,4 @@ test('rendering sidebar properly', () => {
   expect(sectionFeedbacks.length).toBe(1);
   expect(sectionSkills.length).toBe(1);
   expect(sectionContacts.length).toBe(1);
-//  fireEvent.click(screen.getByRole('button'))
-//  expect(sectionContacts.length).toBe(0); 
  })
-
-test('go back to home page', () => {
-  const history = createMemoryHistory()
-  render(
-    <Router history={history}>
-      <Panel />
-    </Router>,
-  )
-  fireEvent.click(screen.getByText(/bak/))
-  expect(screen.getByText(/Programmer. Creative. Innovator/)).toBeInTheDocument()
-  expect(screen.getByText(/My Name/)).toBeInTheDocument()
-})

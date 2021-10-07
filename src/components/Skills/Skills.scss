@@ -3,13 +3,6 @@
 @import "../../assets/styles/sizes.scss";
 
 
-.skills__form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: $indent-m;
-}
-
 .skills__edit {
   position: absolute;
   top: $indent-m;
@@ -17,11 +10,15 @@
 }
 
 .skills__form {
-  width: $width-xl;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+   width: $width-xl;
   padding: $indent-xs $indent-s;
   border: 1px solid $highlight;
   &-field {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     @include text($base-dark, left);
   }

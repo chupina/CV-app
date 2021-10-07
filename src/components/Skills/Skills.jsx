@@ -11,6 +11,7 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import Chart from "../Chart/Chart";
 
 const EditForm = () => {
+  const isPending = useSelector((state) => state.skills.loading);
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
@@ -25,8 +26,13 @@ const EditForm = () => {
         .max(100, "Must be less than oe equal to 100")
         .required("Skill range is a required field"),
     }),
-    onSubmit: (values) => {
-      dispatch(addSkills(values));
+    onSubmit: async (values) => {
+         try {
+        await  dispatch(addSkills(values)).unwrap()
+       } catch (error) {
+         alert(`${error.name} : ${error.message}`)
+        }
+        formik.resetForm()
     },
   });
   return (
@@ -73,7 +79,7 @@ const EditForm = () => {
       <button
         type="submit"
         className="skills__form-submit"
-        disabled={!formik.isValid}
+        disabled={!formik.isValid || !formik.dirty || isPending}
       >
         Add skill
       </button>
@@ -84,8 +90,8 @@ const EditForm = () => {
 const Skills = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.skills.entities);
-  const editMode = useSelector((state) => state.skills.edit);
-  useEffect(() => {
+   const editMode = useSelector((state) => state.skills.edit);
+   useEffect(() => {
     dispatch(fetchSkills());
   }, [dispatch]);
 

@@ -3,6 +3,7 @@
 @import "../../assets/styles/sizes.scss";
 
 .article {
+ 
   &__title {
     margin: $indent-min;
     @include titleInfo(inherit, left);

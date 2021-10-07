@@ -13,7 +13,7 @@ test('App rendering/navigating', () => {
     </Router>,
   )
   // verify page content for expected route
-   expect(screen.getByText(/My Name/)).toBeInTheDocument()
+   expect(screen.getByText(/Alena Chupina/)).toBeInTheDocument()
    expect(screen.getByText(/Programmer. Creative. Innovator/)).toBeInTheDocument()
   fireEvent.click(screen.getByRole('button'))
   const sectionAbout = screen.getAllByText(/About/);
@@ -32,7 +32,7 @@ test('App rendering/navigating', () => {
 
   fireEvent.click(screen.getByText(/Go back/))
   // check that the content changed to the home page
-  expect(screen.getByText(/My Name/)).toBeInTheDocument()
+  expect(screen.getByText(/Alena Chupina/)).toBeInTheDocument()
   expect(screen.getByText(/Programmer. Creative. Innovator/)).toBeInTheDocument()
   expect(screen.queryByText(/About/)).not.toBeInTheDocument();
   expect(screen.queryByText(/Education/)).not.toBeInTheDocument();
@@ -50,5 +50,5 @@ test('redirect to home page', () => {
     </Router>,
   )
   expect(screen.getByText(/Programmer. Creative. Innovator/)).toBeInTheDocument()
-  expect(screen.getByText(/My Name/)).toBeInTheDocument()
+  expect(screen.getByText(/Alena Chupina/)).toBeInTheDocument()
 })

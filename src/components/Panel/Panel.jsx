@@ -7,13 +7,13 @@ import { faChevronLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Panel.scss";
 
 import { Link } from "react-router-dom";
-import photo from "../../assets/images/avatar.png";
+import photo from "../../assets/images/avatar.jpg";
 import ButtonSmall from "../ButtonSmall/ButtonSmall";
 export const Panel = ({ isOpen, toggle }) => {
   return (
     <div className={`panel ${isOpen ? "expand" : "shrink"}`}>
       <div className="sidebar">
-        <PhotoBox size="medium" name="John Doe" avatar={photo} />
+        <PhotoBox size="medium" name="Alena Chupina" avatar={photo} />
         <Navigation />
         <Link to="./">
           <Button

@@ -5,7 +5,7 @@ import "./TimeLIneItem.scss";
 const TimeLineItem = ({ date, title, text }) => {
   return (
     <div className="timeLineItem">
-      <time className="timeLineItem__time">{date}</time>
+      <time className="timeLineItem__time" role="time">{date}</time>
       <div className="timeLineItem__scroll"></div>
       <div className="timeLineItem__info">
         <Article title={title} text={text} />

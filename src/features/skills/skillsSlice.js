@@ -56,7 +56,7 @@ const skillsSlice = createSlice({
     });
 
     builder.addCase(fetchSkills.fulfilled, (state, action) => {
-      state.entities.push(...action.payload.skills)
+      state.entities = action.payload.skills
       state.loading = false;
     });
     builder.addCase(fetchSkills.pending, (state, action) => {

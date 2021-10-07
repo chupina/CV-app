@@ -31,7 +31,8 @@
     "test": "react-scripts test ",
     "coverage": "react-scripts test --coverage --watchAll=false",
     "test:coverage": "npm test -- --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -52,31 +53,26 @@
     ]
   },
   "devDependencies": {
-    "husky": "^7.0.2",
-    "miragejs": "^0.1.42"
+    "husky": "^7.0.0",
+    "miragejs": "^0.1.42",
+    "msw": "^0.35.0"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!/node_modules/",
-      "!/src/utils/",
-      "!/services/",
-      "!/store/",
-      "!/src/WebVitals.js"
+      "!src/reportWebVitals.js",
+      "!src/store/store.js",
+      "!src/services/server.js",
+      "!src/index.js"
     ],
-     "coverageThreshold": {
+    "coverageThreshold": {
       "global": {
         "branches": 35,
         "functions": 35,
         "lines": 35,
-        "statements":35
+        "statements": 35
       }
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test -- --watchAll=false",
-      "pre-push": "npm run test"
     }
   }
 }

@@ -2,6 +2,7 @@
 .timeLine{
   width: $width-xl;
   min-height: $height-s;
-  max-height: height-l;
+  max-height: $height-l;
   overflow-y: auto;
+  overflow-x: hidden;
 }
