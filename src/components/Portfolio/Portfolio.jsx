@@ -3,33 +3,9 @@ import "./Portfolio.scss";
 import Card from "../Card/Card";
 import Isotope from "isotope-layout";
 import { CardInfo } from "./../CardInfo/CardInfo";
+import data from '../../utils/data';
 
-const portfolioData = [
-  {
-    type: "ui",
-    title: "Some text",
-    text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
-    url: "https://somesite.com",
-  },
-  {
-    type: "code",
-    title: "Another text",
-    text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
-    url: "https://somesite.com",
-  },
-  {
-    type: "ui",
-    title: "Some new text",
-    text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
-    url: "https://somesite.com",
-  },
-  {
-    type: "code",
-    title: "Text",
-    text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
-    url: "https://somesite.com",
-  },
-];
+const portfolioData = data.portfolio;
 const filterData = [
   {key:'*', id:"filterAll", value:"all"},
   {key:'ui', id:"filterUI", value:"UI"},

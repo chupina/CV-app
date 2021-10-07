@@ -20,7 +20,7 @@ const TimeLine = () => {
     <div className="timeLine">
       {isFetching ? <Loader />: error ? <ErrorMsg message="Something went wrong. Please review your server connection"/>:
       data.map((item) => (
-        <TimeLineItem key={item.title} {...item} />
+        <TimeLineItem key={item.id} {...item} />
       ))}
     </div>
   );

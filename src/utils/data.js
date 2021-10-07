@@ -1,41 +1,44 @@
 const data = {
-  user:{
-    name:"Alena Chupina",
-    title:"Programmer. Creative. Innovator",
-    description:"",
-    url:""
+  user: {
+    name: "Alena Chupina",
+    title: "Programmer. Creative. Innovator",
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque",
+    url: "",
   },
   expertise: [
     {
-      id:"1",
-      date: "2019-2017",
+      id: "1",
+      date: "2010-2018",
       info: {
-        company: "Google",
-        job: "Front-end developer ",
+        company: "BSESS",
+        job: "Electronic Engineer",
         description:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       },
     },
-    {id:"2",
-      date: "2016",
+    {
+      id: "2",
+      date: "2010",
       info: {
-        company: "Walmart",
-        job: "php programmer",
+        company: "BMS",
+        job: "Electronic Engineer, Intern",
         description:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       },
     },
-    {id:"3",
-      date: "2016",
+    {
+      id: "3",
+      date: "2007",
       info: {
-        company: "Googie",
-        job: "Front-end developer / php programmer",
+        company: "Integral",
+        job: "Manufacturing technician/ technologist",
         description:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       },
     },
 
-    {id:"4",
+    {
+      id: "4",
       date: "2015",
       info: {
         company: "Facebook",
@@ -45,31 +48,11 @@ const data = {
       },
     },
   ],
-  education: [
+   feedbacks: [
     {
-      id:"1",
-      date: 2015,
-      title: "Title 0",
-      text: "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolorLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
-    },
-    {
-      id:"2",
-      date: 2010,
-      title: "Title 1",
-      text: "Et irure culpa ad proident labore excepteur elit dolore. Quis commodo elit culpa eiusmod dolor proident non commodo excepteur aute duis duis eu fugiat. Eu duis occaecat nulla eiusmod non esse cillum est aute elit amet cillum commodo.",
-    },
-    {
-      id:"3",
-      date: 2007,
-      title: "Title 2",
-      text: "Labore esse tempor ",
-    },
-  ],
-  feedbacks: [
-    {
-      id:"1",
+      id: "1",
       feedback:
-        " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+        " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. ",
       reporter: {
         photoUrl:
           "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
@@ -78,9 +61,9 @@ const data = {
       },
     },
     {
-      id:"2",
+      id: "2",
       feedback:
-        " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+        " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. ",
       reporter: {
         photoUrl:
           "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
@@ -89,9 +72,10 @@ const data = {
       },
     },
 
-    {id:"3",
+    {
+      id: "3",
       feedback:
-        " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. ",
       reporter: {
         photoUrl:
           "https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg",
@@ -100,6 +84,32 @@ const data = {
       },
     },
   ],
+  portfolio:[
+    {
+      type: "ui",
+      title: "Some text",
+      text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
+      url: "https://somesite.com",
+    },
+    {
+      type: "code",
+      title: "Another text",
+      text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
+      url: "https://somesite.com",
+    },
+    {
+      type: "ui",
+      title: "Some new text",
+      text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
+      url: "https://somesite.com",
+    },
+    {
+      type: "code",
+      title: "Text",
+      text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
+      url: "https://somesite.com",
+    },
+  ]
 };
 
 export default data;

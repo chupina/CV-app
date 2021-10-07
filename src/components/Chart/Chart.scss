@@ -60,3 +60,11 @@
     }
   }
 }
+
+@media only screen and (max-width: $media-mobile) {
+  .chart{ 
+    &__range::after, &__range::before{
+      display: none;
+    }
+  }
+}
