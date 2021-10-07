@@ -2,7 +2,7 @@ import React from "react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import { render, fireEvent, screen, waitFor } from "../../utils/testUtils";
-//import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import TimeLine from "./TimeLine";
 
 const testData = [
@@ -37,22 +37,22 @@ afterAll(() => server.close());
 
 test("properly show timeline section initially", async () => {
   render(
-    // <BrowserRouter>
+    <BrowserRouter>
       <TimeLine />
-    // </BrowserRouter>
+     </BrowserRouter>
   );
   expect(screen.getByTestId("loader")).toBeInTheDocument();
 });
 
-// test("should render data timeline", async () => {
-//   const { getByText } = render(
-//     <BrowserRouter>
-//       <TimeLine />
-//     </BrowserRouter>
-//   );
-//   await waitFor(() => {
-//     expect(getByText('Test1')).toBeInTheDocument()
-//     expect(getByText('Test2')).toBeInTheDocument()
-//     expect(getByText('Test3')).toBeInTheDocument()
-//   })
-// });
+test("should render data timeline", async () => {
+  const { getByText } = render(
+    <BrowserRouter>
+      <TimeLine />
+    </BrowserRouter>
+  );
+  await waitFor(() => {
+    expect(getByText('Test1')).toBeInTheDocument()
+    expect(getByText('Test2')).toBeInTheDocument()
+    expect(getByText('Test3')).toBeInTheDocument()
+  })
+});

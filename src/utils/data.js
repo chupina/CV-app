@@ -1,6 +1,13 @@
 const data = {
+  user:{
+    name:"Alena Chupina",
+    title:"Programmer. Creative. Innovator",
+    description:"",
+    url:""
+  },
   expertise: [
     {
+      id:"1",
       date: "2019-2017",
       info: {
         company: "Google",
@@ -9,7 +16,7 @@ const data = {
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       },
     },
-    {
+    {id:"2",
       date: "2016",
       info: {
         company: "Walmart",
@@ -18,7 +25,7 @@ const data = {
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       },
     },
-    {
+    {id:"3",
       date: "2016",
       info: {
         company: "Googie",
@@ -28,7 +35,7 @@ const data = {
       },
     },
 
-    {
+    {id:"4",
       date: "2015",
       info: {
         company: "Facebook",
@@ -40,16 +47,19 @@ const data = {
   ],
   education: [
     {
+      id:"1",
       date: 2015,
       title: "Title 0",
       text: "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolorLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
     },
     {
+      id:"2",
       date: 2010,
       title: "Title 1",
       text: "Et irure culpa ad proident labore excepteur elit dolore. Quis commodo elit culpa eiusmod dolor proident non commodo excepteur aute duis duis eu fugiat. Eu duis occaecat nulla eiusmod non esse cillum est aute elit amet cillum commodo.",
     },
     {
+      id:"3",
       date: 2007,
       title: "Title 2",
       text: "Labore esse tempor ",
@@ -57,6 +67,7 @@ const data = {
   ],
   feedbacks: [
     {
+      id:"1",
       feedback:
         " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       reporter: {
@@ -67,6 +78,7 @@ const data = {
       },
     },
     {
+      id:"2",
       feedback:
         " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       reporter: {
@@ -77,7 +89,7 @@ const data = {
       },
     },
 
-    {
+    {id:"3",
       feedback:
         " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       reporter: {
