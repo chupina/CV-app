@@ -6,6 +6,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  margin-top: $indent-s;
   border: 1px solid $base-gray;
   border-top: none;
   @include textCite($base-gray);
@@ -33,14 +34,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     padding: $indent-xxs $indent-s;
-    margin-bottom: $indent-s;
+    margin-bottom: $indent-xxs;
     background-color: $highlight;
   }
   &__range {
     position: relative;
     width: 60%;
     height: $indent-xs;
-    border: 1px solid $base-gray;
+   border: 1px solid $base-gray;
     border-top: none;
     border-bottom: none;
     &::before {
