@@ -11,6 +11,7 @@
     display: none;
   }
   label {
+    @include textButton();
     cursor: pointer;
     text-transform: capitalize;
   }
