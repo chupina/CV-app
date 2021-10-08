@@ -1,0 +1,53 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
+
+.skills__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+   width: $width-xl;
+  padding: $indent-xs $indent-s;
+  border: 1px solid $highlight;
+  &-field {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include text($base-dark, left);
+  }
+  &-input {
+    width: $width-xl;
+    max-width: $input-width;
+    height: $input-height;
+    padding: $indent-xs $indent-xs;
+    margin: $indent-xs $indent-m;
+    &.danger {
+      color: $error;
+      border: 1px solid $error;
+    }
+    &::placeholder {
+      @include textCite($base-gray, left);
+    }
+  }
+  &-submit {
+    padding: $indent-xs $indent-m;
+    margin: $indent-xs $indent-min;
+    background-color: $highlight;
+    border-radius: $indent-xxs;
+    border: none;
+    @include textButton($color-white, center);
+    cursor: pointer;
+    &:hover {
+      background-color: $highlight;
+    }
+    &:disabled {
+      background-color: $base-gray;
+      color: $base-dark;
+      cursor: not-allowed;
+    }
+  }
+  &__validation-error {
+    color: $error;
+  }
+}
