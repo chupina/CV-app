@@ -4,15 +4,15 @@
 
 .photoBox {
   display: flex;
- max-width: 500px;
+  max-width: $width-main-box;
   flex-direction: column;
   align-items: center;
- margin-top: $indent-m;
+  margin-top: $indent-m;
   color: $color-white;
   text-align: center;
   &__avatar {
-    border: 1px solid $color-white;
-    border-radius: 50%;
+    border: $border-s solid $color-white;
+    border-radius: $photo-border-radius;
   }
 }
 
@@ -59,8 +59,8 @@
 
 @media only screen and (max-width: $media-mobile) {
   .large {
-      .photoBox__header {
-       @include subheader();
+    .photoBox__header {
+      @include subheader();
     }
     .photoBox__subheader {
       @include titleInfo();
@@ -71,7 +71,7 @@
   }
   .medium {
     .photoBox__avatar {
-      max-width: 40px;
+      max-width: $photo-xs;
     }
     .photoBox__header,
     .photoBox__subheader,

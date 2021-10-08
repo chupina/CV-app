@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup, screen } from "@testing-library/react";
-import { Article } from "./Article";
+import Article from "./Article";
 
 afterEach(cleanup);
 

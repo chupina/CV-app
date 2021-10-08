@@ -2,13 +2,13 @@
 @import "../../assets/styles/typography.scss";
 @import "../../assets/styles/sizes.scss";
 .feedback {
-  padding: 0;
-  margin: 0;
+  padding: $indent-min;
+  margin: $indent-min;
   display: flex;
   flex-direction: column;
   margin-bottom: $indent-title;
   &__text {
-    margin: 0;
+    margin: $indent-min;
     width: $width-xl;
   }
   &__caption {
@@ -27,8 +27,7 @@
     }
     h3 {
       @include textCite($base-dark);
-      margin: 0;
+      margin: $indent-min;
     }
   }
 }
-

@@ -2,16 +2,16 @@
 @import "../../assets/styles/typography.scss";
 @import "../../assets/styles/sizes.scss";
 
-
 .skills__form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-   width: $width-xl;
+  width: $width-xl;
   padding: $indent-xs $indent-s;
-  border: 1px solid $highlight;
+  border: $border-s solid $highlight;
   &-field {
     display: flex;
+    width: $width-xl;
     flex-wrap: wrap;
     align-items: center;
     @include text($base-dark, left);
@@ -22,9 +22,12 @@
     height: $input-height;
     padding: $indent-xs $indent-xs;
     margin: $indent-xs $indent-m;
+    border-radius: $input-border-radius;
+    border: $border-s solid $base-gray;
+    outline:none;
     &.danger {
       color: $error;
-      border: 1px solid $error;
+      border: $border-s solid $error;
     }
     &::placeholder {
       @include textCite($base-gray, left);
@@ -34,7 +37,7 @@
     padding: $indent-xs $indent-m;
     margin: $indent-xs $indent-min;
     background-color: $highlight;
-    border-radius: $indent-xxs;
+    border-radius: $input-border-radius;
     border: none;
     @include textButton($color-white, center);
     cursor: pointer;
@@ -42,8 +45,7 @@
       background-color: $highlight;
     }
     &:disabled {
-      background-color: $base-gray;
-      color: $base-dark;
+      background-color: $base-dark;
       cursor: not-allowed;
     }
   }

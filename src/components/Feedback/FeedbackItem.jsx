@@ -1,7 +1,7 @@
 import React from "react";
 import "./FeedbackItem.scss";
 import Info from "./../Info/Info";
-import { PhotoBox } from "../PhotoBox/PhotoBox";
+import PhotoBox from "../PhotoBox/PhotoBox";
 
 const FeedbackItem = ({ feedback, reporter }) => {
   return (

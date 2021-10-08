@@ -21,7 +21,7 @@ const testData = {
   },
 };
 
-test("renders ExpertiseItem component properly", () => {
+test("renders ExpertiseItem component children properly", () => {
   render(<ExpertiseItem data={testData} />);
   expect(mockChildComponent).toHaveBeenCalledWith(
     expect.objectContaining({

@@ -3,7 +3,7 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import { render, screen, cleanup } from "../../utils/testUtils";
 import "@testing-library/jest-dom";
-import { Panel } from "./Panel";
+import Panel from "./Panel";
 
 afterEach(cleanup);
 

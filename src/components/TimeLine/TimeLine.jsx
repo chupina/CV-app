@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
+import "./TimeLine.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchEducation } from "../../features/education/educationSlice";
 import Loader from "../Loader/Loader";
-import "./TimeLine.scss";
 import TimeLineItem from "./TimeLineItem";
-import ErrorMsg from './../ErrorMsg/ErrorMsg';
+import ErrorMsg from "./../ErrorMsg/ErrorMsg";
 
 const TimeLine = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.education.entities);
-  const isFetching = useSelector((state) => state.education.loading);
-  const error = useSelector((state) => state.education.error);
+  const { entities, loading, error } = useSelector((state) => state.education);
 
   useEffect(() => {
     dispatch(fetchEducation());
@@ -18,10 +16,13 @@ const TimeLine = () => {
 
   return (
     <div className="timeLine">
-      {isFetching ? <Loader />: error ? <ErrorMsg message="Something went wrong. Please review your server connection"/>:
-      data.map((item) => (
-        <TimeLineItem key={item.id} {...item} />
-      ))}
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <ErrorMsg message="Something went wrong. Please review your server connection" />
+      ) : (
+        entities.map((item) => <TimeLineItem key={item.id} {...item} />)
+      )}
     </div>
   );
 };

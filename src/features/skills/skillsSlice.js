@@ -1,21 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-async function fetchSkillsData (){
-  const response = await fetch('api/skills')
+async function fetchSkillsData() {
+  const response = await fetch("api/skills");
   return response.json();
-  }
+}
 
 async function postSkillsData(item) {
-    const response = await fetch('api/skills', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ item }),
-    });
-    return response.json();
-  }
-
+  const response = await fetch("api/skills", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ item }),
+  });
+  return response.json();
+}
 
 export const addSkills = createAsyncThunk(
   "skills/addSkills",
@@ -26,26 +25,25 @@ export const addSkills = createAsyncThunk(
 );
 
 export const fetchSkills = createAsyncThunk(
-  'skills/fetchSkills',
-    async (thunkApi) => {
-        const response = await fetchSkillsData();
-        console.log("server response", response)
-        return response;
+  "skills/fetchSkills",
+  async (thunkApi) => {
+    const response = await fetchSkillsData();
+    console.log("server response", response);
+    return response;
   }
 );
 
 const skillsSlice = createSlice({
   name: "skills",
-  initialState: { entities: [], 
-  loading: false,
-  edit: false,
- },
-  reducers: {toggleEdit(state, action){
-    state.edit = !state.edit;
-}},
+  initialState: { entities: [], loading: false, edit: false },
+  reducers: {
+    toggleEdit(state, action) {
+      state.edit = !state.edit;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(addSkills.fulfilled, (state, action) => {
-      state.entities.push(action.payload.skill)
+      state.entities.push(action.payload.skill);
       state.loading = false;
     });
     builder.addCase(addSkills.pending, (state, action) => {
@@ -56,7 +54,7 @@ const skillsSlice = createSlice({
     });
 
     builder.addCase(fetchSkills.fulfilled, (state, action) => {
-      state.entities = action.payload.skills
+      state.entities = action.payload.skills;
       state.loading = false;
     });
     builder.addCase(fetchSkills.pending, (state, action) => {
@@ -67,5 +65,5 @@ const skillsSlice = createSlice({
     });
   },
 });
-export const {toggleEdit} = skillsSlice.actions
+export const { toggleEdit } = skillsSlice.actions;
 export default skillsSlice.reducer;

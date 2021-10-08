@@ -4,12 +4,12 @@
 
 .box {
   position: relative;
- padding: $indent-m $indent-xl $indent-m $indent-l ;
-     &__title {
-    margin:$indent-min $indent-min  $indent-title $indent-min;
-    @include titleSection($highlight, left); 
-      }
+  padding: $indent-m $indent-xl $indent-m $indent-l;
+  &__title {
+    margin: $indent-min $indent-min $indent-title $indent-min;
+    @include titleSection($highlight, left);
+  }
   &__content {
     @include text($base-dark, justify);
-   }
+  }
 }

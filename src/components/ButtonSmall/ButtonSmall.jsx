@@ -1,6 +1,10 @@
 import React from "react";
-import  './ButtonSmall.scss';
+import "./ButtonSmall.scss";
 
- const ButtonSmall=({clickHandler, children})=><button className='burger'  onClick={clickHandler}>{children}</button>
+const ButtonSmall = ({ clickHandler, children }) => (
+  <button className="burger" onClick={clickHandler}>
+    {children}
+  </button>
+);
 
- export default ButtonSmall;
+export default ButtonSmall;

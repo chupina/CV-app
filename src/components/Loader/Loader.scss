@@ -2,22 +2,25 @@
 @import "../../assets/styles/animation.scss";
 @import "../../assets/styles/sizes.scss";
 
-.wrapper{
-  width: 100%;
+.wrapper {
+  width: $width-xl;
   min-height: $height-s;
   max-height: $height-l;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-.loader{
+.loader {
   color: $highlight;
   font-size: $indent-l;
-  animation: spin 2s linear infinite;
+  animation: spin $animation-speed-slow linear infinite;
 }
 
 @keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,9 +1,9 @@
-import React  from "react";
+import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./SkillsForm.scss";
 
-const SkillsForm = ({isLoading, submitHandler}) => {
+const SkillsForm = ({ isLoading, submitHandler }) => {
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -13,20 +13,23 @@ const SkillsForm = ({isLoading, submitHandler}) => {
       title: Yup.string().required("Skill name is a required field"),
       level: Yup.number()
         .typeError("Skill range has to be a number")
-        .min(10, "Must be greater than oe equal to 10")
-        .max(100, "Must be less than oe equal to 100")
+        .min(10, "Must be greater than or equal to 10")
+        .max(100, "Must be less than or equal to 100")
         .required("Skill range is a required field"),
     }),
-    onSubmit:(values)=>{
-      submitHandler(values)
-      formik.resetForm()}
+    onSubmit: (values) => {
+      submitHandler(values);
+      formik.resetForm();
+    },
   });
   return (
     <form className="skills__form" onSubmit={formik.handleSubmit}>
       <div className="skills__form-field">
         <label htmlFor="skillNameName">Skill Name</label>
         <input
-          className="skills__form-input"
+          className={`skills__form-input ${
+            formik.errors.title && formik.touched.title ? "danger" : ""
+          }`}
           id="skillName"
           name="title"
           type="text"
@@ -45,7 +48,7 @@ const SkillsForm = ({isLoading, submitHandler}) => {
         <label htmlFor="skillRange">Skill Range</label>
         <input
           className={`skills__form-input ${
-            formik.errors.level && formik.touched.level  ? "danger" : ""
+            formik.errors.level && formik.touched.level ? "danger" : ""
           }`}
           id="skillRange"
           name="level"
@@ -65,7 +68,7 @@ const SkillsForm = ({isLoading, submitHandler}) => {
       <button
         type="submit"
         className="skills__form-submit"
-        disabled={!formik.isValid || !formik.dirty ||  isLoading}
+        disabled={!formik.isValid || !formik.dirty || isLoading}
       >
         Add skill
       </button>

@@ -4,20 +4,20 @@
 
 .panel {
   position: fixed;
-  z-index: 999;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  z-index: $z-idx-sidebar;
+  top: $position-min;
+  bottom: $position-min;
+  left: $position-min;
   display: flex;
   transition: transform $animation-speed-normal $animation-style-base;
   &.shrink {
-  transform: translateX(calc(-100% + 30px));
-}
-&.expand {
-  transform: translateX(0);
-}
+    transform: translateX(calc(-100% + 30px));
+  }
+  &.expand {
+    transform: translateX(0);
+  }
   .sidebar {
-    padding:$indent-min;
+    padding: $indent-min;
     background-color: $base-dark;
     display: flex;
     flex-direction: column;
@@ -25,4 +25,3 @@
     justify-content: flex-start;
   }
 }
-

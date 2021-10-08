@@ -14,7 +14,7 @@ const navigationData = [
   { text: "Feedbacks", icon: "faComment", path: "feedbacks" },
 ];
 
-export const Navigation = () => {
+const Navigation = () => {
   useEffect(() => {
     Events.scrollEvent.register("begin", function () {});
     Events.scrollEvent.register("end", function () {});
@@ -49,3 +49,5 @@ export const Navigation = () => {
     </nav>
   );
 };
+
+export default Navigation;

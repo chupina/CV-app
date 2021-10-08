@@ -1,7 +1,7 @@
 import React from "react";
 import "./PhotoBox.scss";
 
-export const PhotoBox = ({ name, title, description, avatar, size }) => {
+const PhotoBox = ({ name, title, description, avatar, size }) => {
   return (
     <div className={`photoBox ${size}`}>
       <img className="photoBox__avatar" src={avatar} alt="user avatar" />
@@ -11,3 +11,5 @@ export const PhotoBox = ({ name, title, description, avatar, size }) => {
     </div>
   );
 };
+
+export default PhotoBox

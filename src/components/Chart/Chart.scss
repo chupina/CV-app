@@ -7,20 +7,20 @@
   display: flex;
   justify-content: center;
   margin-top: $indent-s;
-  border: 1px solid $base-gray;
+  border: $border-s solid $base-gray;
   border-top: none;
   @include textCite($base-gray);
   &::before {
     position: absolute;
-    top: 100%;
-    left: 0%;
+    top: $position-max;
+    left: $position-min;
     content: "Beginner";
     padding-top: $indent-xs;
   }
   &::after {
     position: absolute;
-    top: 100%;
-    right: 0%;
+    top: $position-max;
+    right: $position-min;
     padding-top: $indent-xs;
     content: "Master";
   }
@@ -39,22 +39,22 @@
   }
   &__range {
     position: relative;
-    width: 60%;
+    width: $range-width;
     height: $indent-xs;
-   border: 1px solid $base-gray;
+    border: $border-s solid $base-gray;
     border-top: none;
     border-bottom: none;
     &::before {
       position: absolute;
-      top: 100%;
-      left: -20px;
+      top: $position-max;
+      left: $offset-s;
       content: "Proficient";
       padding-top: $indent-xs;
     }
     &::after {
       position: absolute;
-      top: 100%;
-      right: -20px;
+      top: $position-max;
+      right: $offset-s;
       padding-top: $indent-xs;
       content: "Expert";
     }
@@ -62,8 +62,9 @@
 }
 
 @media only screen and (max-width: $media-mobile) {
-  .chart{ 
-    &__range::after, &__range::before{
+  .chart {
+    &__range::after,
+    &__range::before {
       display: none;
     }
   }

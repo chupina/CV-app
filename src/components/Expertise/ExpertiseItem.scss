@@ -9,8 +9,8 @@
   grid-template-areas:
     "company content"
     "date content";
-  grid-template-columns: 85px auto;
-  grid-template-rows: $indent-m auto;
+  grid-template-columns: $grid-column-m auto;
+  grid-template-rows: $grid-row-s auto;
   gap: $indent-xxs $indent-l;
   &__date {
     grid-area: date;
