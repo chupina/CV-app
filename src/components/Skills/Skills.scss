@@ -50,6 +50,7 @@
     &:disabled {
       background-color: $base-gray;
       color: $base-dark;
+      cursor: not-allowed;
     }
   }
   &__validation-error {

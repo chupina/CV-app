@@ -2,7 +2,8 @@ const data = {
   user: {
     name: "Alena Chupina",
     title: "Programmer. Creative. Innovator",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque",
     url: "",
   },
   expertise: [
@@ -36,19 +37,8 @@ const data = {
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
       },
     },
-
-    {
-      id: "4",
-      date: "2015",
-      info: {
-        company: "Facebook",
-        job: "Front-end developer / php programmer",
-        description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
-      },
-    },
   ],
-   feedbacks: [
+  feedbacks: [
     {
       id: "1",
       feedback:
@@ -84,7 +74,7 @@ const data = {
       },
     },
   ],
-  portfolio:[
+  portfolio: [
     {
       type: "ui",
       title: "Some text",
@@ -109,7 +99,42 @@ const data = {
       text: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
       url: "https://somesite.com",
     },
-  ]
+  ],
+  contactData: [
+    {
+      id: "1",
+      address: "tel:+16312294822",
+      title: "(631) 229-4822",
+      icon: "faPhoneAlt",
+    },
+    {
+      id: "2",
+      address: "mailto:chupina>elen@gmail.com",
+      title: "chupina.elen@gmail.com",
+      icon: "faEnvelope",
+    },
+    {
+      id: "3",
+      address: "https://www.twitter.com",
+      title: "Twitter",
+      subtitle: "https://www.twitter.com",
+      icon: "faTwitter",
+    },
+    {
+      id: "4",
+      address: "https://www.facebook.com",
+      title: "Facebook",
+      subtitle: "https://www.facebook.com",
+      icon: "faFacebookF",
+    },
+    {
+      id: "5",
+      address: "skype:echo123?chat",
+      title: "Skype",
+      subtitle: "my.name",
+      icon: "faSkype",
+    },
+  ],
 };
 
 export default data;

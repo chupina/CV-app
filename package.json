@@ -61,7 +61,7 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!/node_modules/",
       "!src/reportWebVitals.js",
-      "!src/store/store.js",
+      "!src/assets/*/*.js",
       "!src/services/server.js",
       "!src/index.js"
     ],

@@ -2,16 +2,10 @@ import React from "react";
 import "./Address.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import icons from '../../assets/fonts/iconsLib'
-const contactData = [
-  {id:"1",address:"tel:+16312294822", title:"(631) 229-4822", icon:'faPhoneAlt'},
-  {id:"2",address:"mailto:chupina>elen@gmail.com", title:"chupina.elen@gmail.com", icon:'faEnvelope'},
-  {id:"3",address:"https://www.twitter.com", title:"Twitter", subtitle:"https://www.twitter.com", icon:'faTwitter'},
-  {id:"4",address:"https://www.facebook.com", title:"Facebook", subtitle:"https://www.facebook.com", icon:'faFacebookF'},
-  {id:"5",address:"skype:echo123?chat", title:"Skype", subtitle:"my.name",icon:'faSkype'},
-]
+
   
 
-const Address = () => {
+const Address = ({contactData}) => {
   return (
     <div>
       {

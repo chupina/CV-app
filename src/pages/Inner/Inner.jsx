@@ -54,7 +54,7 @@ export const Inner = () => {
           <Portfolio/>
         </Box>
         <Box title="Contacts" id="contacts">
-          <Address />
+          <Address contactData={data.contactData} />
         </Box>
         <Box title="Feedbacks" id="feedbacks">
           <Feedback
