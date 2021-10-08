@@ -25,10 +25,14 @@
     border-radius: $input-border-radius;
     border: $border-s solid $base-gray;
     outline:none;
+    &:focus{
+      border: $border-s solid $highlight;
+    }
     &.danger {
       color: $error;
       border: $border-s solid $error;
     }
+    
     &::placeholder {
       @include textCite($base-gray, left);
     }
