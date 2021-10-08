@@ -9,6 +9,7 @@ import "./Panel.scss";
 import { Link } from "react-router-dom";
 import photo from "../../assets/images/avatar.jpg";
 import ButtonSmall from "../ButtonSmall/ButtonSmall";
+
 export const Panel = ({ isOpen, toggle }) => {
   return (
     <div className={`panel ${isOpen ? "expand" : "shrink"}`} data-testid="sidebar">
