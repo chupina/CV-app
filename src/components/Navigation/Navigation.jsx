@@ -1,38 +1,23 @@
 import React, { useEffect } from "react";
 import "./Navigation.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faGraduationCap,
-  faPen,
-  faPaperPlane,
-  faGem,
-  faBriefcase,
-  faComment,
-} from "@fortawesome/free-solid-svg-icons";
+import icons from "../../assets/fonts/iconsLib";
 import { Link, Events } from "react-scroll";
 
 const navigationData = [
-  { text: "About me", icon: faUser, path: "about" },
-  { text: "Education", icon: faGraduationCap, path: "education" },
-  { text: "Experience", icon: faPen, path: "experience" },
-  { text: "Skills", icon: faGem, path: "skills" },
-  { text: "Portfolio", icon: faBriefcase, path: "portfolio" },
-  { text: "Contacts", icon: faPaperPlane, path: "contacts" },
-  { text: "Feedbacks", icon: faComment, path: "feedbacks" },
+  { text: "About me", icon: "faUser", path: "about" },
+  { text: "Education", icon: "faGraduationCap", path: "education" },
+  { text: "Experience", icon: "faPen", path: "experience" },
+  { text: "Skills", icon: "faGem", path: "skills" },
+  { text: "Portfolio", icon: "faBriefcase", path: "portfolio" },
+  { text: "Contacts", icon: "faPaperPlane", path: "contacts" },
+  { text: "Feedbacks", icon: "faComment", path: "feedbacks" },
 ];
-
 
 export const Navigation = () => {
   useEffect(() => {
-    Events.scrollEvent.register("begin", function () {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register("end", function () {
-      console.log("end", arguments);
-    });
-
+    Events.scrollEvent.register("begin", function () {});
+    Events.scrollEvent.register("end", function () {});
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
@@ -54,7 +39,7 @@ export const Navigation = () => {
               offset={-150}
             >
               <span className="icon">
-                <FontAwesomeIcon icon={icon} />
+                <FontAwesomeIcon icon={icons[`${icon}`]} />
               </span>
               <span className="navigation__text">{text}</span>
             </Link>
@@ -64,5 +49,3 @@ export const Navigation = () => {
     </nav>
   );
 };
-
-  
