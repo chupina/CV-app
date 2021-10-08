@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSkills, addSkills } from "../../features/skills/skillsSlice";
 import { toggleEdit } from "../../features/skills/skillsSlice";
 import "./Skills.scss";
 import { Button } from "./../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import icons from "../../assets/fonts/iconsLib";
 import Chart from "../Chart/Chart";
 import SkillsForm from "./SkillsForm";
 
@@ -20,17 +18,26 @@ const Skills = () => {
   }, [dispatch]);
 
   const toggle = () => dispatch(toggleEdit());
+
+  const formSubmit = async (values) => {
+    try {
+   await  dispatch(addSkills(values)).unwrap()
+  } catch (error) {
+    console.log(`${error.name} : ${error.message}`)
+   }
+ };
+
   return (
     <>
       <div className="edit__wrapper">
         <div className="skills__edit">
           <Button
-            icon={<FontAwesomeIcon icon={faEdit} />}
+            icon={<FontAwesomeIcon icon={icons['faEdit']} />}
             text={edit ? "Close edit" : "Open edit"}
             onClick={() => toggle()}
           />{" "}
         </div>
-        {edit ? <SkillsForm isLoading={loading} /> : <></>}
+        {edit ? <SkillsForm isLoading={loading} submitHandler={formSubmit}  /> : <></>}
       </div>
       <Chart data={entities} />
     </>

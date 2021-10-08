@@ -1,12 +1,9 @@
 import React  from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useDispatch} from "react-redux";
-import { addSkills } from "../../features/skills/skillsSlice";
 import "./SkillsForm.scss";
 
-const SkillsForm = ({isLoading}) => {
-    const dispatch = useDispatch();
+const SkillsForm = ({isLoading, submitHandler}) => {
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -20,14 +17,9 @@ const SkillsForm = ({isLoading}) => {
         .max(100, "Must be less than oe equal to 100")
         .required("Skill range is a required field"),
     }),
-    onSubmit: async (values) => {
-         try {
-        await  dispatch(addSkills(values)).unwrap()
-       } catch (error) {
-         alert(`${error.name} : ${error.message}`)
-        }
-        formik.resetForm()
-    },
+    onSubmit:(values)=>{
+      submitHandler(values)
+      formik.resetForm()}
   });
   return (
     <form className="skills__form" onSubmit={formik.handleSubmit}>
@@ -53,7 +45,7 @@ const SkillsForm = ({isLoading}) => {
         <label htmlFor="skillRange">Skill Range</label>
         <input
           className={`skills__form-input ${
-            formik.errors.level ? "danger" : ""
+            formik.errors.level && formik.touched.level  ? "danger" : ""
           }`}
           id="skillRange"
           name="level"
