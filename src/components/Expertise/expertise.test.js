@@ -1,6 +1,8 @@
-import React from 'react'
-import {render, screen} from '@testing-library/react';
-import ExpertiseItem from './ExpertiseItem';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import ExpertiseItem from "./ExpertiseItem";
+
+afterEach(cleanup);
 
 const mockChildComponent = jest.fn();
 jest.mock("../Article/Article", () => (props) => {
@@ -19,12 +21,12 @@ const testData = {
   },
 };
 
-test('renders ExpertiseItem component properly', () => {
-render(<ExpertiseItem data={testData}/>);
+test("renders ExpertiseItem component properly", () => {
+  render(<ExpertiseItem data={testData} />);
   expect(mockChildComponent).toHaveBeenCalledWith(
     expect.objectContaining({
       title: "Electronic Engineer",
-     text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+      text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
     })
-  )
- })
+  );
+});

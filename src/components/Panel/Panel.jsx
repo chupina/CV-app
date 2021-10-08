@@ -11,7 +11,7 @@ import photo from "../../assets/images/avatar.jpg";
 import ButtonSmall from "../ButtonSmall/ButtonSmall";
 export const Panel = ({ isOpen, toggle }) => {
   return (
-    <div className={`panel ${isOpen ? "expand" : "shrink"}`}>
+    <div className={`panel ${isOpen ? "expand" : "shrink"}`} data-testid="sidebar">
       <div className="sidebar">
         <PhotoBox size="medium" name="Alena Chupina" avatar={photo} />
         <Navigation />

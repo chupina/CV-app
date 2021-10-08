@@ -1,6 +1,8 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import ButtonSmall from "./ButtonSmall";
+
+afterEach(cleanup);
 
 test("renders small button component properly", () => {
   const handleClick = jest.fn();

@@ -7,7 +7,7 @@ import photo from "../../assets/images/avatar.jpg";
 import data from '../../utils/data';
 export const Home = () => {
   return (
-    <main className='hero'>
+    <main className='hero' data-testid="hero">
       <PhotoBox
         size="large"
         name={data.user.name}

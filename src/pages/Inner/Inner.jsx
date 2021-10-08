@@ -20,10 +20,12 @@ export const Inner = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollUp = () => window.scrollTo({ top: 0, behavior: "smooth"})
+
   return (
     <div className='innerPage'>
       <Panel isOpen={isOpen} toggle={togglePanel} />
-      <main className={`main__content ${isOpen? 'narrow' : 'wide'} `} >
+      <main className={`main__content ${isOpen? 'narrow' : 'wide'} `} data-testid="inner" >
         <Box title="About me" id="about">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
@@ -63,7 +65,7 @@ export const Inner = () => {
         </Box>
         <div className='scrollUp'>
           <ButtonSmall
-        clickHandler={() => {window.scrollTo({ top: 0, behavior: "smooth" });}}
+        clickHandler={scrollUp}
         >
           <FontAwesomeIcon icon={faChevronRight} />
         </ButtonSmall>

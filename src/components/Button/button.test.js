@@ -1,6 +1,8 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import { Button } from "./Button";
+
+afterEach(cleanup);
 
 test("renders button component properly", () => {
   const handleClick = jest.fn();

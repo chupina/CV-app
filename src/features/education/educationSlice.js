@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 async function fetchEducationData (){
-  const response = await fetch(`http://localhost:3000/api/educations`)
+  const response = await fetch('api/educations')
   return response.json();
   }
 

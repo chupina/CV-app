@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 async function fetchSkillsData (){
-  const response = await fetch(`http://localhost:3000/api/skills`)
+  const response = await fetch('api/skills')
   return response.json();
   }
 
 async function postSkillsData(item) {
-    const response = await fetch(`http://localhost:3000/api/skills`, {
+    const response = await fetch('api/skills', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,9 +1,11 @@
-import React from 'react'
-import {render, screen} from '@testing-library/react';
-import Address from './Address';
+import React from "react";
+import { render, cleanup, screen } from "@testing-library/react";
+import Address from "./Address";
+
+afterEach(cleanup);
 
 const TestData = [
-    {
+  {
     id: "1",
     address: "mailto:chupina>elen@gmail.com",
     title: "chupina.elen@gmail.com",
@@ -15,11 +17,11 @@ const TestData = [
     title: "Twitter",
     subtitle: "https://www.twitter.com",
     icon: "faTwitter",
-  }
-]
+  },
+];
 
-test('renders address component properly', () => {
-  render(<Address contactData={TestData}/>)
+test("renders address component properly", () => {
+  render(<Address contactData={TestData} />);
   expect(screen.getByText(/chupina.elen@gmail.com/)).toBeInTheDocument();
-     expect(screen.getByText(/Twitter/)).toBeInTheDocument();
-  })
+  expect(screen.getByText(/Twitter/)).toBeInTheDocument();
+});
