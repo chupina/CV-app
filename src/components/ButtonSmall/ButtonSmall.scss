@@ -1,0 +1,17 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
+.burger{
+  width: $button-s;
+  height: $button-s;
+  margin-top: $indent-m;
+   background-color: $base-dark;
+  color: $color-white;
+  border-radius:$indent-min $indent-xxs $indent-xxs $indent-min;
+  border:none;
+  cursor: pointer;
+   :hover{
+    color:$highlight;
+  }
+}

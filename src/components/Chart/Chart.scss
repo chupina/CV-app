@@ -1,0 +1,71 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
+.chart__ruler {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: $indent-s;
+  border: $border-s solid $base-gray;
+  border-top: none;
+  @include textCite($base-gray);
+  &::before {
+    position: absolute;
+    top: $position-max;
+    left: $position-min;
+    content: "Beginner";
+    padding-top: $indent-xs;
+  }
+  &::after {
+    position: absolute;
+    top: $position-max;
+    right: $position-min;
+    padding-top: $indent-xs;
+    content: "Master";
+  }
+}
+.chart {
+  margin-top: $indent-title;
+  margin-bottom: $indent-m;
+  &__bar {
+    @include titleInfo($base-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: $indent-xxs $indent-s;
+    margin-bottom: $indent-xxs;
+    background-color: $highlight;
+  }
+  &__range {
+    position: relative;
+    width: $range-width;
+    height: $indent-xs;
+    border: $border-s solid $base-gray;
+    border-top: none;
+    border-bottom: none;
+    &::before {
+      position: absolute;
+      top: $position-max;
+      left: $offset-s;
+      content: "Proficient";
+      padding-top: $indent-xs;
+    }
+    &::after {
+      position: absolute;
+      top: $position-max;
+      right: $offset-s;
+      padding-top: $indent-xs;
+      content: "Expert";
+    }
+  }
+}
+
+@media only screen and (max-width: $media-mobile) {
+  .chart {
+    &__range::after,
+    &__range::before {
+      display: none;
+    }
+  }
+}

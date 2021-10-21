@@ -1,0 +1,28 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+.filter {
+  display: flex;
+  padding-bottom: $indent-xs;
+  &__input {
+    &:checked + label {
+      color: $highlight;
+    }
+    display: none;
+  }
+  label {
+    @include textButton();
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  &__item + &__item > label:before {
+    content: "/";
+    color: $base-dark;
+    padding: 0 $indent-xxs;
+  }
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+}

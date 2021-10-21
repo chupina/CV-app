@@ -1,0 +1,27 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/sizes.scss";
+@import "../../assets/styles/animation.scss";
+
+.panel {
+  position: fixed;
+  z-index: $z-idx-sidebar;
+  top: $position-min;
+  bottom: $position-min;
+  left: $position-min;
+  display: flex;
+  transition: transform $animation-speed-normal $animation-style-base;
+  &.shrink {
+    transform: translateX(calc(-100% + 30px));
+  }
+  &.expand {
+    transform: translateX(0);
+  }
+  .sidebar {
+    padding: $indent-min;
+    background-color: $base-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

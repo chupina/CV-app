@@ -1,0 +1,29 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
+.button{
+  padding: $indent-xs $indent-m;
+  margin-bottom: $indent-m;
+  background-color: $base-dark;
+  border-radius: $indent-xxs;
+  border: none;
+  @include textButton($color-white, center);
+  cursor:pointer;
+  &:hover{
+    background-color: $highlight;
+  }
+  & span{
+    margin-left: $indent-xs;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: $media-mobile) {
+ .button span:nth-child(2){
+    display: none;
+  }   
+}

@@ -1,0 +1,14 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/sizes.scss";
+
+.hero{
+  width: $full-width;
+  height: $full-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: $indent-min;
+  padding: $indent-m;
+   background:linear-gradient(0deg, rgba(0, 6, 20, 0.7), rgba(0, 6, 20, 0.7)), url(../../assets/images/background.png) no-repeat center/cover;
+  }

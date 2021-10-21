@@ -1,0 +1,26 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
+.expertiseItem {
+  width: $width-xl;
+  margin-bottom: $indent-l;
+  display: grid;
+  grid-template-areas:
+    "company content"
+    "date content";
+  grid-template-columns: $grid-column-m auto;
+  grid-template-rows: $grid-row-s auto;
+  gap: $indent-xxs $indent-l;
+  &__date {
+    grid-area: date;
+    @include textButton($base-gray);
+  }
+  &__company {
+    grid-area: company;
+    @include titleInfo($base-dark);
+  }
+  &__info {
+    grid-area: content;
+  }
+}
