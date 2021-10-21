@@ -1,0 +1,33 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+.feedback {
+  padding: $indent-min;
+  margin: $indent-min;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $indent-title;
+  &__text {
+    margin: $indent-min;
+    width: $width-xl;
+  }
+  &__caption {
+    margin-top: $indent-m;
+    display: flex;
+    align-items: center;
+  }
+  &__cite {
+    margin-left: $indent-m;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+      padding: $indent-min $indent-xxs;
+      @include textCite($highlight);
+    }
+    h3 {
+      @include textCite($base-dark);
+      margin: $indent-min;
+    }
+  }
+}

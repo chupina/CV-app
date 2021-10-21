@@ -1,11 +1,11 @@
 import React from "react";
-import { createMemoryHistory } from "history";
-import { Router } from "react-router-dom";
-import { render, fireEvent, screen, cleanup } from "./utils/testUtils";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
-import "@testing-library/jest-dom";
-import App from "./App";
+import { render,screen, cleanup} from "../../utils/testUtils";
+import { BrowserRouter } from "react-router-dom";
+import TimeLine from "./TimeLine";
+
+afterEach(cleanup);
 
 const testData = [
   { 
@@ -32,9 +32,6 @@ export const handlers = [
   rest.get("http://localhost/api/educations", (req, res, ctx) => {
     return res(ctx.json(testData), ctx.delay(0));
   }),
-  rest.get("http://localhost/api/skills", (req, res, ctx) => {
-    return res(ctx.json({}), ctx.delay(0));
-  }),
 ];
 
 const server = setupServer(...handlers);
@@ -43,37 +40,22 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-
-afterEach(cleanup);
-
-
-test("App rendering/navigating", () => {
-  const history = createMemoryHistory();
+test("properly show timeline section initially", async () => {
   render(
-    <Router history={history}>
-      <App />
-    </Router>
+    <BrowserRouter>
+      <TimeLine />
+     </BrowserRouter>
   );
-  // verify page content for expected route
-  expect(screen.getByText(/Alena Chupina/)).toBeInTheDocument();
-  expect(
-    screen.getByText(/Programmer. Creative. Innovator/)
-  ).toBeInTheDocument();
-  fireEvent.click(screen.getByRole("button"));
-  expect(screen.getByTestId("sidebar")).toBeInTheDocument();
-  expect(screen.getByTestId("inner")).toBeInTheDocument();
-  expect(screen.queryByTestId("hero")).not.toBeInTheDocument();
-  fireEvent.click(screen.getByText(/Go back/));
-  expect(screen.getByTestId("hero")).toBeInTheDocument();
+  expect(screen.getByTestId("loader")).toBeInTheDocument();
 });
 
-test("redirect to home page", () => {
-  const history = createMemoryHistory();
-  history.push("/some/bad/route");
+test("should render data timeline", async () => {
   render(
-    <Router history={history}>
-      <App />
-    </Router>
+    <BrowserRouter>
+      <TimeLine />
+    </BrowserRouter>
   );
-  expect(screen.getByTestId("hero")).toBeInTheDocument();
-});
+  expect(await screen.findByText("Test1")).toBeInTheDocument();
+  expect(await screen.findByText("Test2")).toBeInTheDocument();
+  expect(await screen.findByText("Test3")).toBeInTheDocument();
+  });

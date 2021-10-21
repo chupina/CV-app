@@ -1,0 +1,40 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+@import "../../assets/styles/animation.scss";
+
+.portfolio__card {
+  position: relative;
+  max-width: $width-card;
+  width: $width-card;
+  height: $height-card;
+  margin: $indent-xs $indent-xs $indent-min $indent-min;
+  overflow: hidden;
+  background: url(../../assets/images/card_2.png) no-repeat center/cover;
+
+  &:hover > div {
+    top: $indent-min;
+  }
+  &.ui {
+    background: url(../../assets/images/card_1.png) no-repeat center/cover;
+  }
+  &.code {
+    background: url(../../assets/images/card_3.png) no-repeat center/cover;
+  }
+  &__info {
+    position: absolute;
+    top: $width-xl;
+    width: $width-xl;
+    height: $width-xl;
+    padding: $indent-m $indent-s;
+    background-color: $color-white;
+    opacity: 0.9;
+    transition: top $animation-speed-normal $animation-style-base;
+  }
+}
+
+@media only screen and (max-width: $media-mobile) {
+  .portfolio__card {
+    width: $width-xl;
+  }
+}

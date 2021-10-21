@@ -1,0 +1,42 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+
+.timeLineItem {
+  display: grid;
+  gap: $indent-s;
+  grid-template-areas:
+    " time content"
+    "scroll content";
+  grid-template-columns: $grid-column-s auto;
+  grid-template-rows: $grid-row-m auto;
+
+  &__time {
+    @include titleInfo();
+    align-self: center;
+    grid-area: time;
+  }
+  &__scroll {
+    grid-area: scroll;
+    width: $indent-xxs;
+    justify-self: center;
+    background-color: $highlight;
+  }
+  &__info {
+    grid-area: content;
+    position: relative;
+    padding: $indent-s;
+    margin-left: $indent-m;
+    margin-bottom: $indent-xs;
+    background-color: $gallery;
+    &::before {
+      position: absolute;
+      left: -$indent-xs;
+      top: $indent-m;
+      content: "";
+      border-top: $indent-xxs solid transparent;
+      border-bottom: $indent-xxs solid transparent;
+      border-right: $indent-xs solid $gallery;
+    }
+  }
+}

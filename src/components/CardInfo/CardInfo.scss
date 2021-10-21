@@ -1,0 +1,18 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__title {
+    margin: $indent-min;
+    @include titleInfo($highlight);
+  }
+  &__content {
+    @include text($base-dark);
+  }
+   &__link {
+    @include text($highlight); 
+   }
+}

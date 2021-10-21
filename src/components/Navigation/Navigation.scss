@@ -1,0 +1,55 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/typography.scss";
+@import "../../assets/styles/sizes.scss";
+@import "../../assets/styles/animation.scss";
+
+nav {
+  height: $width-xl;
+  margin-top: $indent-title;
+}
+
+.navigation {
+  width: $menu-open;
+  height: $width-xl;
+  display: flex;
+  flex-direction: column;
+  transition: all $animation-speed-normal $animation-style-base;
+  list-style-type: none;
+  padding: $indent-min;
+  &__item {
+    display: flex;
+    padding: $indent-m $indent-min $indent-m $indent-min;
+    flex-direction: row;
+    @include textButton($base-gray);
+  }
+  &__link {
+    display: flex;
+    text-decoration: none;
+    &:hover {
+      color: $color-white;
+      cursor: pointer;
+    }
+    &_active {
+      color: $highlight;
+    }
+    .icon {
+      padding: $indent-min $indent-m;
+    }
+  }
+  &__text {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: $media-mobile) {
+  .navigation {
+    width: $menu-closed;
+    align-items: center;
+    &__text {
+      display: none;
+    }
+    .icon {
+      padding: $indent-min;
+    }
+  }
+}
