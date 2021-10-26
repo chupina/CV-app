@@ -1,25 +1,27 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getData, postData } from "../../services/requestHandlers";
 
-async function fetchSkillsData() {
-  const response = await fetch("api/skills");
-  return response.json();
-}
 
-async function postSkillsData(item) {
-  const response = await fetch("api/skills", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ item }),
-  });
-  return response.json();
-}
+// async function fetchSkillsData() {
+//   const response = await fetch("api/skills");
+//   return response.json();
+// }
+
+// async function postSkillsData(item) {
+//   const response = await fetch("api/skills", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ item }),
+//   });
+//   return response.json();
+// }
 
 export const addSkills = createAsyncThunk(
   "skills/addSkills",
   async (payload, thunkApi) => {
-    const response = await postSkillsData(payload);
+    const response = await postData("api/skills",payload);
     return response;
   }
 );
@@ -27,7 +29,7 @@ export const addSkills = createAsyncThunk(
 export const fetchSkills = createAsyncThunk(
   "skills/fetchSkills",
   async (thunkApi) => {
-    const response = await fetchSkillsData();
+    const response = await getData("api/skills");
     console.log("server response", response);
     return response;
   }

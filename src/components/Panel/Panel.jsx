@@ -9,8 +9,9 @@ import { Link } from "react-router-dom";
 import ButtonSmall from "../ButtonSmall/ButtonSmall";
 import photo from "../../assets/images/avatar.jpg";
 import data from "../../utils/data";
-
+const goBackIcon = <FontAwesomeIcon icon={icons["faChevronLeft"]} />;
 const Panel = ({ isOpen, toggle }) => {
+
   return (
     <div
       className={`panel ${isOpen ? "expand" : "shrink"}`}
@@ -22,7 +23,7 @@ const Panel = ({ isOpen, toggle }) => {
         <Link to="./">
           <Button
             text="Go back"
-            icon={<FontAwesomeIcon icon={icons["faChevronLeft"]} />}
+            icon={goBackIcon}
           />
         </Link>
       </div>

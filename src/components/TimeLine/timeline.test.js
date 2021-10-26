@@ -28,31 +28,31 @@ const testData = [
   },
 ];
 //mock get request
-export const handlers = [
-  rest.get("http://localhost/api/educations", (req, res, ctx) => {
-    return res(ctx.json(testData), ctx.delay(0));
-  }),
-];
+// export const handlers = [
+//   rest.get("http://localhost/api/educations", (req, res, ctx) => {
+//     return res(ctx.json(testData), ctx.delay(0));
+//   }),
+// ];
 
-const server = setupServer(...handlers);
+// const server = setupServer(...handlers);
 
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
+// beforeAll(() => server.listen());
+// afterEach(() => server.resetHandlers());
+// afterAll(() => server.close());
 
 test("properly show timeline section initially", async () => {
   render(
     <BrowserRouter>
-      <TimeLine />
+      <TimeLine data={testData} />
      </BrowserRouter>
   );
-  expect(screen.getByTestId("loader")).toBeInTheDocument();
+  expect(screen.queryByTestId("loader")).not.toBeInTheDocument();
 });
 
 test("should render data timeline", async () => {
   render(
     <BrowserRouter>
-      <TimeLine />
+      <TimeLine data={testData} />
     </BrowserRouter>
   );
   expect(await screen.findByText("Test1")).toBeInTheDocument();

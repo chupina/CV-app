@@ -12,6 +12,7 @@ import Skills from "../../components/Skills/Skills";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import data from "../../utils/data";
+import Education from "../../components/Education/Education";
 
 const Inner = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -47,7 +48,7 @@ const Inner = () => {
           semper libero, sit amet adipiscing sem neque
         </Box>
         <Box title="Education" id="education">
-          <TimeLine data={data.education} />
+          <Education/>
         </Box>
         <Box title="Experience" id="experience">
           <Expertise data={data.expertise} />
