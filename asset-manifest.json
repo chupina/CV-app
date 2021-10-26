@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/chupina/CV-app/static/css/main.828f9bd4.chunk.css",
+    "main.js": "/chupina/CV-app/static/js/main.84846fb5.chunk.js",
+    "main.js.map": "/chupina/CV-app/static/js/main.84846fb5.chunk.js.map",
+    "runtime-main.js": "/chupina/CV-app/static/js/runtime-main.9b11cbe7.js",
+    "runtime-main.js.map": "/chupina/CV-app/static/js/runtime-main.9b11cbe7.js.map",
+    "static/css/2.679831fc.chunk.css": "/chupina/CV-app/static/css/2.679831fc.chunk.css",
+    "static/js/2.715c3fa6.chunk.js": "/chupina/CV-app/static/js/2.715c3fa6.chunk.js",
+    "static/js/2.715c3fa6.chunk.js.map": "/chupina/CV-app/static/js/2.715c3fa6.chunk.js.map",
+    "static/js/3.5505d313.chunk.js": "/chupina/CV-app/static/js/3.5505d313.chunk.js",
+    "static/js/3.5505d313.chunk.js.map": "/chupina/CV-app/static/js/3.5505d313.chunk.js.map",
+    "index.html": "/chupina/CV-app/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/chupina/CV-app/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.828f9bd4.chunk.css.map": "/chupina/CV-app/static/css/main.828f9bd4.chunk.css.map",
+    "static/js/2.715c3fa6.chunk.js.LICENSE.txt": "/chupina/CV-app/static/js/2.715c3fa6.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/chupina/CV-app/static/media/OpenSans-SemiBold.d8e49ca1.ttf",
+    "static/media/avatar.5cebf824.jpg": "/chupina/CV-app/static/media/avatar.5cebf824.jpg",
+    "static/media/Home.scss": "/chupina/CV-app/static/media/background.9af1de1c.png",
+    "static/media/Card.scss": "/chupina/CV-app/static/media/card_3.1516f145.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b11cbe7.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.715c3fa6.chunk.js",
+    "static/css/main.828f9bd4.chunk.css",
+    "static/js/main.84846fb5.chunk.js"
+  ]
+}
