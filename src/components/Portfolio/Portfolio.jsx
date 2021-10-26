@@ -54,11 +54,12 @@ const Portfolio = () => {
       </div>
 
       <div className="filter-container">
-        {portfolioData.map(({ title, text, url, type }) => {
-          return (
-            <Card key={title} type={type}>
-              <CardInfo title={title} text={text} url={url} />
-            </Card>
+        {portfolioData.map(({ type, ...rest }) => {
+    return (
+      <Card key={rest.title} type={type}>
+        <CardInfo {...rest} />
+      </Card>
+
           );
         })}
       </div>

@@ -14,6 +14,8 @@ const navigationData = [
   { text: "Feedbacks", icon: "faComment", path: "feedbacks" },
 ];
 
+const SCROLL_DURATION = 500;
+
 const Navigation = () => {
   useEffect(() => {
     Events.scrollEvent.register("begin", function () {});
@@ -33,9 +35,9 @@ const Navigation = () => {
               activeClass="navigation__link_active"
               className="navigation__link"
               to={path}
-              spy={true}
-              smooth={true}
-              duration={500}
+              spy
+              smooth
+              duration={SCROLL_DURATION}
               offset={-150}
             >
               <span className="icon">

@@ -10,8 +10,9 @@ const Chart = ({ data }) => {
           key={skill.id}
           data-testid="bar"
           style={{ width: `${skill.item.level}%` }}
-        >
-          {skill.item.title}
+        >          
+        {skill.item.title}
+          
         </div>
       ))}
       <div className="chart__ruler">

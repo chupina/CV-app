@@ -26,13 +26,13 @@ const Skills = () => {
       console.log(`${error.name} : ${error.message}`);
     }
   };
-
+  const editIcon = <FontAwesomeIcon icon={icons["faEdit"]} />
   return (
     <>
       <div className="edit__wrapper">
         <div className="skills__edit">
           <Button
-            icon={<FontAwesomeIcon icon={icons["faEdit"]} />}
+            icon={editIcon}
             text={edit ? "Close edit" : "Open edit"}
             onClick={() => toggle()}
           />
