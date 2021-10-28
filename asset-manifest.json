@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/CV-app/static/css/main.1c913aa8.chunk.css",
-    "main.js": "/CV-app/static/js/main.84846fb5.chunk.js",
-    "main.js.map": "/CV-app/static/js/main.84846fb5.chunk.js.map",
+    "main.css": "/CV-app/static/css/main.ca6cf0ee.chunk.css",
+    "main.js": "/CV-app/static/js/main.b5dd5790.chunk.js",
+    "main.js.map": "/CV-app/static/js/main.b5dd5790.chunk.js.map",
     "runtime-main.js": "/CV-app/static/js/runtime-main.c45fab79.js",
     "runtime-main.js.map": "/CV-app/static/js/runtime-main.c45fab79.js.map",
     "static/css/2.679831fc.chunk.css": "/CV-app/static/css/2.679831fc.chunk.css",
@@ -12,10 +12,10 @@
     "static/js/3.5505d313.chunk.js.map": "/CV-app/static/js/3.5505d313.chunk.js.map",
     "index.html": "/CV-app/index.html",
     "static/css/2.679831fc.chunk.css.map": "/CV-app/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.1c913aa8.chunk.css.map": "/CV-app/static/css/main.1c913aa8.chunk.css.map",
+    "static/css/main.ca6cf0ee.chunk.css.map": "/CV-app/static/css/main.ca6cf0ee.chunk.css.map",
     "static/js/2.715c3fa6.chunk.js.LICENSE.txt": "/CV-app/static/js/2.715c3fa6.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/CV-app/static/media/OpenSans-SemiBold.d8e49ca1.ttf",
-    "static/media/avatar.5cebf824.jpg": "/CV-app/static/media/avatar.5cebf824.jpg",
+    "static/media/avatar.62eab9b8.png": "/CV-app/static/media/avatar.62eab9b8.png",
     "static/media/Home.scss": "/CV-app/static/media/background.9af1de1c.png",
     "static/media/Card.scss": "/CV-app/static/media/card_3.1516f145.png"
   },
@@ -23,7 +23,7 @@
     "static/js/runtime-main.c45fab79.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.715c3fa6.chunk.js",
-    "static/css/main.1c913aa8.chunk.css",
-    "static/js/main.84846fb5.chunk.js"
+    "static/css/main.ca6cf0ee.chunk.css",
+    "static/js/main.b5dd5790.chunk.js"
   ]
 }
